@@ -32,8 +32,6 @@ export const getCompletions = (document: vscode.TextDocument, position: vscode.P
             break;
 
         case "Mobs":
-            console.log("Case mob at least");
-            console.log(location.key);
             switch(location.key) {
                 case "Type":
                     console.log("Case type");
@@ -42,6 +40,16 @@ export const getCompletions = (document: vscode.TextDocument, position: vscode.P
                     });
                     break;
                 case "Options":
+                    if(location.option !== undefined){
+                        entityOptions.options.forEach((element: Option) => {
+                            if(element.option === location.option){
+                                element.values.forEach((value: string) => {
+                                    completions.push(new vscode.CompletionItem(value, vscode.CompletionItemKind.Text));
+                                });
+                            }
+                        });
+                        break;
+                    }
                     entityOptions.options.forEach((element: Option) => {
                         completions.push(new vscode.CompletionItem(element.option, vscode.CompletionItemKind.Text));
                     });
