@@ -1,5 +1,6 @@
 export interface SkillAttribute {
     attribute: string,
     aliases: string[],
-    description: string
+    description: string,
+    values: string[]
 }
