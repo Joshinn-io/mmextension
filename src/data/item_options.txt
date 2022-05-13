@@ -1,0 +1,14 @@
+Durability
+Color
+Player
+SkinURL
+SkinTexture
+Indestructable
+Unbreakable
+HideFlags
+AppendType
+Model
+CustomModelData
+MaxEnchants
+RepairCost
+PreventStacking

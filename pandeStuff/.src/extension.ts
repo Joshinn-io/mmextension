@@ -26,7 +26,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 	const definitionProvider = vscode.languages.registerDefinitionProvider({ scheme: 'file', pattern: '**' }, {
 		provideDefinition(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken) {
-			console.log(keys(document));
+			console.log("Keys:" + keys(document));
 			getLocation(document);
 			return findDefinition(document, position, token);
 		}
@@ -40,6 +40,6 @@ export function deactivate() {
 
 function keys(document: vscode.TextDocument) {
 	const file = fs.readFileSync(document.uri.fsPath, 'utf8');
-	console.log(YAML.parse(file));
+	console.log("YAML: " + YAML.parse(file));
 	return YAML.parse(file);
 }
