@@ -32,7 +32,8 @@ export const getCompletions = (document: vscode.TextDocument, position: vscode.P
             break;
 
         case "Mobs":
-
+            console.log("Case mob at least");
+            console.log(location.key);
             switch(location.key) {
                 case "Type":
                     console.log("Case type");
