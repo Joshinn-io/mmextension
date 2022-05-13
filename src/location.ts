@@ -39,10 +39,10 @@ export const getLocation = (document: vscode.TextDocument)  => {
     if(editor) {
         let cursorLinePos = editor.selection.active.line;
         let line = document.lineAt(cursorLinePos);
-        fileLines = fileLines.slice(0, cursorLinePos);
+        fileLines = fileLines.slice(0, cursorLinePos+1);
+        console.log("File Lines 2: " + fileLines);
         console.log("cursorLinePos: " + cursorLinePos);
         console.log("line: " + line.text);
-        console.log("fileLines: " + fileLines);
         // Line, Skill, Attributes
         tryGetLineData(mL, line.text, editor.selection.active.character);
 
@@ -75,6 +75,7 @@ function tryGetSectionData(mythicLoc: MythicLocation, fileLines: string[]) {
     for(let fileLine in fileLines.reverse()) {
         
         fileLine = fileLines[fileLine].trimEnd();
+        console.log("File Line: " + fileLine);
         const lineDivs = fileLine.split("-").length-1;
         const lineColons = fileLine.split(":").length-1;
         const lineEndChar = fileLine.charAt(fileLine.length-1);
