@@ -1,0 +1,169 @@
+{
+    "options" : [
+        {
+            "option": "Repairable",
+            "applicable": "Universal",
+            "description": "Sets the repair cost of the item to maximum, making it completely uneditable in anvils and/or enchantment tables. Will override RepairCost option. Defaults to false.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "RepairCost",
+            "applicable": "Universal",
+            "description": "Sets the repair cost of the item. ",
+            "values": [
+                "integer"
+            ]
+        },
+        {
+            "option": "Unbreakable",
+            "applicable": "Universal",
+            "description": "Sets the item to be unbreakable. Will override Durability option. Defaults to false.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "HideFlags",
+            "applicable": "Universal",
+            "description": "Hides all the item flags, making things like enchants not visibile in the item lore. Defaults to false.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "PreventStacking",
+            "applicable": "Universal",
+            "description": "Prevents the item from being stacked in an inventory. Defaults to false.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "Player",
+            "applicable": "Playerheads",
+            "description": "Sets the player to be the head of the item. ",
+            "values": [
+                "Player Name"
+            ]
+        },
+        {
+            "option": "SkinTexture",
+            "applicable": "Playerheads",
+            "description": "Sets the skin texture of the head to the URL. ",
+            "values": [
+                "URL"
+            ]
+        },
+        {
+            "option": "Color",
+            "applicable": "Dyeable",
+            "description": "Sets the color of the item. ",
+            "values": [
+                "Dye Color",
+                "R,G,B"
+            ]
+        },
+        {
+            "option": "Colors",
+            "applicable": "Fireworks",
+            "description": "Sets the firework colors. ",
+            "values": [
+                "R,G,B"
+            ]
+        },
+        {
+            "option": "FadeColors",
+            "applicable": "Fireworks",
+            "description": "Sets the firework fade colors. ",
+            "values": [
+                "R,G,B"
+            ]
+        },
+        {
+            "option": "Flicker",
+            "applicable": "Fireworks",
+            "description": "Sets the firework flicker on/off. ",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "Trail",
+            "applicable": "Fireworks",
+            "description": "Sets the firework trail on/off. ",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "CancelDamage",
+            "applicable": "Universal",
+            "description": "Prevents the item from doing physical melee damage on hit if set to true. Defaults to false. CRUCIBLE ONLY!",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "Destroy",
+            "applicable": "Universal",
+            "description": "If true, the item will be removed from every player. Used to remove a matching item from the server. CRUCIBLE ONLY!",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "DestroyOnDrop",
+            "applicable": "Universal",
+            "description": "Destroys the item if the player drops it. CRUCIBLE ONLY!",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "KeepOnDeath",
+            "applicable": "Universal",
+            "description": "Keeps the item on death. CRUCIBLE ONLY!",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "PreventDropping",
+            "applicable": "Universal",
+            "description": "Prevents the item from being dropped. CRUCIBLE ONLY!",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "Permission",
+            "applicable": "Universal",
+            "description": "Sets the permission required to use the item. If the player doesn't have the permission it will be removed from their inventory!! CRUCIBLE ONLY!",
+            "values": [
+                "Permission.Node"
+            ]
+        },
+        {
+            "option": "AppendType",
+            "applicable": "Universal",
+            "description": "Appends the MythicMobs item ID into the NBT so it can be recognized. Defaults to TRUE! Please keep this on unless you have a very specific use case.",
+            "values": [
+                "true",
+                "false"
+            ]
+        }
+    ]
+}

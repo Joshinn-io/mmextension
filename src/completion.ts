@@ -23,8 +23,20 @@ export const getCompletions = (document: vscode.TextDocument, position: vscode.P
                     });
                     break;
                 case "Options":
-                    itemOptions.forEach(element => {
-                        completions.push(new vscode.CompletionItem(element, vscode.CompletionItemKind.Text));
+                    if(location.option !== undefined){
+                        console.log("Location options was not undefined.");
+                        itemOptions.options.forEach((element: Option) => {
+                            if(element.option === location.option){
+                                element.values.forEach((value: string) => {
+                                    completions.push(new vscode.CompletionItem(value, vscode.CompletionItemKind.Text));
+                                });
+                            }
+                        });
+                        break;
+                    }
+
+                    itemOptions.options.forEach((element: Option) => {
+                        completions.push(new vscode.CompletionItem(element.option, vscode.CompletionItemKind.Text));
                     });
                     break;
             }

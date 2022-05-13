@@ -6,7 +6,7 @@ import { ExtensionContext, Uri, Webview } from 'vscode';
 export let items: Array<string> = [];
 export let entities = require('./data/MobTypes.json');
 
-export let itemOptions: Array<string> = [];
+export let itemOptions = require('./data/ItemOptions.json');
 export let entityOptions = require ('./data/Options.json');
 
 
@@ -17,7 +17,7 @@ export function generateData(ctx: vscode.ExtensionContext) {
     items = readIntoArray('items.txt');
     // entities = readIntoArray('entities.txt');
 
-    itemOptions = readIntoArray('item_options.txt');
+    // itemOptions = readIntoArray('item_options.txt');
     // entityOptions = readIntoArray('entity_options.txt');
 }
 
