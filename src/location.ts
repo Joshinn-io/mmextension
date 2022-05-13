@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 import * as vscode from 'vscode';
 import * as fs from 'fs';
-import { Console } from 'console';
 
 enum LocationType {
     Items,
