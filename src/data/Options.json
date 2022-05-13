@@ -1,0 +1,967 @@
+{
+    "options": [
+        {
+            "option": "AlwaysShowName",
+            "applicable": "Universal",
+            "description": "Whether the name tag should always be visibile, even when the player is not looking at it. Equivalent of the NBT-tag `CustomNameVisible`. Defaults to false.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "ApplyInvisibility",
+            "applicable": "Universal",
+            "description": "Sets permanent invisibility effect on the mob (No need for invisibility potions ~onSpawn).",
+            "values": [
+                "true",
+                "false"   
+            ]
+        },
+        {
+            "option": "Collidable",
+            "applicable": "Universal",
+            "description": "Whether the mob is collidable. Defaults to true. If this is on false, arrows cannot hit it.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "DigOutOfGround",
+            "applicable": "Universal",
+            "description": "Teleports the mob two blocks up if it takes suffocation damage.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "Despawn",
+            "applicable": "Universal",
+            "description": "Determines whether mobs will despawn if no players are nearby. Should generally be turned on if you are using alot of entities.",
+            "values" : [
+                "true",
+                "false",
+                "chunk",
+                "persistent"
+            ]
+        },
+        {
+            "option": "FollowRange",
+            "applicable": "Universal",
+            "description": "Max distance between the mob and target before the mob will lose aggro. Also defines initial aggro range. Defaults to standard range.",
+            "values": [
+                "number"
+            ]
+        },
+        {
+            "option": "Glowing",
+            "applicable": "Universal",
+            "description": "Whether the mob should permanently be glowing.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "Invincible",
+            "applicable": "Universal",
+            "description": "Makes the mob completely invincible. Cannot be changed by command skills. Defaults false.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "Interactable",
+            "applicable": "Universal",
+            "description": "Make the mob interactable. Defaults to false. Denies interaction with armorstand equipment.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "LockPitch",
+            "applicable": "Universal",
+            "description": "Requires ProtocolLib, keeps mobs heads from looking up/down.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "KnockbackResistance",
+            "applicable": "Universal",
+            "description": "Number between 0 and 1 that defines resistance of mob to knockback. Still punch bowable",
+            "values": [
+                "number"
+            ]
+        },
+        {
+            "option": "MaxCombatDistance",
+            "applicable": "Universal",
+            "description": "Mob cannot be damaged by players further than # blocks away.",
+            "values":[
+                "number"
+            ]
+        },
+        {
+            "option": "MovementSpeed",
+            "applicable": "Universal",
+            "description": "Movement Speed of the mob, most default to 0.2.",
+            "values": [
+                "number"
+            ]
+        },
+        {
+            "option": "NoAI",
+            "applicable": "Universal",
+            "description": "Disables AI for the mob. Defaults to false. Will not cast skills.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "NoDamageTicks",
+            "applicable": "Universal",
+            "description": "Defines how long the mob is invulnerable after taking damage. Defaults to 10.",
+            "values": [
+                "number"
+            ]
+        },
+        {
+            "option": "NoGravity",
+            "applicable": "Universal",
+            "description": "Whether the mob should be affected by gravity. Defaults to false. Cannot have velocity mechanic if set to true.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "PassthroughDamage",
+            "applicable": "Universal",
+            "description": "Causes all damage taken to be redirected to the mobs parent, if one exists. Defaults false.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "Persistent",
+            "applicable": "Universal",
+            "description": "Makes the mob immune to mm m killall command. Can still despawn.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "PreventItemPickup",
+            "applicable": "Universal",
+            "description": "Prevents the mob from picking up items. Defaults to true.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "PreventLeashing",
+            "applicable": "Universal",
+            "description": "Whether to prevent a leash from being placed on the mob. Defaults to true.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "PreventMobKillDrops",
+            "applicable": "Universal",
+            "description": "Prevent OTHER mobs killed by THIS mob from dropping their items, defaults to false.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "PreventOtherDrops",
+            "applicable": "Universal",
+            "description": "Should MYthicMobs block this mob from dropping its vanilla/normal items.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "PreventRandomEquipment",
+            "applicable": "Universal",
+            "description": "Prevents the mob from spawning with random armor and weapons. Defaults to false.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "PreventRenaming",
+            "applicable": "Universal",
+            "description": "Prevents the mob from being renamed from a nametag, defaults to true.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "PreventSunburn",
+            "applicable": "Universal",
+            "description": "Prevents the mob from being damaged by sunburn. Defaults to false.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "RepeatAllSkills",
+            "applicable": "Universal",
+            "description": "Whether to repeat HP based skills if a mob heals back above the health threshhold.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "ShowHealth",
+            "applicable": "Universal",
+            "description": "Displays health of mob through messages broadcast within a radius.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "Silent",
+            "applicable": "Universal",
+            "description": "Whether or not the mob should use vanilla sound effects.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "CanMove",
+            "applicable": "Armor Stands",
+            "description": "Whether an armor stand can move or not. Requires PaperSpigot.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "CanTick",
+            "applicable": "Armor Stands",
+            "description": "Whether an armor stand can tick or not. Requires PaperSpigot.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "HasArms",
+            "applicable": "Armor Stands",
+            "description": "Whether an armor stand has arms or not. Defaults to false.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "HasBasePlate",
+            "applicable": "Armor Stands",
+            "description": "Whether an armor stand has a base plate or not. Defaults to true.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "HasGravity",
+            "applicable": "Armor Stands",
+            "description": "Whether an armor stand has gravity or not. Defaults to true.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "Invisible",
+            "applicable": "Armor Stands",
+            "description": "Whether an armor stand is invisible or not. Defaults to false.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "ItemBody",
+            "applicable": "Armor Stands",
+            "description": "The mythic item that the armor stand will have on its body. ",
+            "values": [
+                "MythicItem"
+            ]
+        },
+        {
+            "option": "ItemFeet",
+            "applicable": "Armor Stands",
+            "description": "The mythic item that the armor stand will have on its feet. ",
+            "values": [
+                "MythicItem"
+            ]
+        },
+        {
+            "option": "ItemHand",
+            "applicable": "Armor Stands",
+            "description": "The mythic item that the armor stand will have on its hand. ",
+            "values": [
+                "MythicItem"
+            ]
+        },
+        {
+            "option": "ItemHead",
+            "applicable": "Armor Stands",
+            "description": "The mythic item that the armor stand will have on its head. ",
+            "values": [
+                "MythicItem"
+            ]
+        },
+        {
+            "option": "ItemLegs",
+            "applicable": "Armor Stands",
+            "description": "The mythic item that the armor stand will have on its legs. ",
+            "values": [
+                "MythicItem"
+            ]
+        },
+        {
+            "option": "Marker",
+            "applicable": "Armor Stands",
+            "description": "Whether the armor should should be a marker. This makes it undestroyable and uninteractable.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "Small",
+            "applicable": "Armor Stands",
+            "description": "Whether the armor stand is small or not. Defaults to false.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "Anger",
+            "applicable": "Bees",
+            "description": "Sets the time in ticks until bee anger ends. If set to 0 it will not default angry.",
+            "values": [
+                "number"
+            ]
+        },
+        {
+            "option": "HasNectar",
+            "applicable": "Bees",
+            "description": "Whether the bee is carrying pollen.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "HasStung",
+            "applicable": "Bees",
+            "description": "Whether the bee has stung an entity.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "CatType",
+            "applicable": "Cat",
+            "description": "Sets the type of cat. ALL_BLACK, BLACK, BRITISH_SHORTHAIR, CALICO, PERSIAN, JELLIE, RAGDOLL, RED, SIAMESE, TABBY, WHITE.",
+            "values": [
+                "ALL_BLACK",
+                "BLACK",
+                "BRITISH_SHORTHAIR",
+                "CALICO",
+                "PERSIAN",
+                "JELLIE",
+                "RAGDOLL",
+                "RED",
+                "SIAMESE",
+                "TABBY",
+                "WHITE"
+            ]
+        },
+        {
+            "option": "CollarColor",
+            "applicable": "Cat",
+            "description": "Sets the color of the cat's collar.",
+            "values": [
+                "BLACK",
+                "BLUE",
+                "BROWN",
+                "CYAN",
+                "GRAY",
+                "GREEN",
+                "LIGHT_BLUE",
+                "LIGHT_GRAY",
+                "LIME",
+                "MAGENTA",
+                "ORANGE",
+                "PINK",
+                "PURPLE",
+                "RED",
+                "WHITE",
+                "YELLOW"
+            ]
+        },
+        {
+            "option": "Jockey",
+            "applicable": "Chicken",
+            "description": "Whether or not the chicken is a jockey. Doesn't do much.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "ExplosionRadius",
+            "applicable": "Creepers",
+            "description": "Sets the radius of the creepers explosion.",
+            "values": [
+                "number"
+            ]
+        },
+        {
+            "option": "FuseTicks",
+            "applicable": "Creeper",
+            "description": "Sets the number of ticks it takes for the creeper to explode.",
+            "values": [
+                "number"
+            ]
+        },
+        {
+            "option": "SuperCharged",
+            "applicable": "Creeper",
+            "description": "Whether or not the creeper is super charged.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "PreventSuicide",
+            "applicable": "Creeper",
+            "description": "Whether or not the creeper will die when exploding. mobGriefing must be set to true.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "PreventTeleport",
+            "applicable": "Enderman",
+            "description": "Whether or not the enderman will teleport when teleporting.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "HeldBlock",
+            "applicable": "Enderman",
+            "description": "Sets the block that the enderman is holding.",
+            "values": [
+                "Material"
+            ]
+        },
+        {
+            "option": "Experience",
+            "applicable": "Experience Orb",
+            "description": "Sets the amount of experience the experience orb has. Defaults to 1",
+            "values": [
+                "number"
+            ]
+        },
+        {
+            "option": "Block",
+            "applicable": "Falling Block",
+            "description": "Sets the block that the falling block will be.",
+            "values": [
+                "Material"
+            ]
+        },
+        {
+            "option": "BlockData",
+            "applicable": "Falling Block",
+            "description": "Sets the block data that the falling block will have.",
+            "values": [
+                "number"
+            ]
+        },
+        {
+            "option": "DropsItem",
+            "applicable": "Falling Block",
+            "description": "Whether or not the falling block will drop an item. Defaults to true.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "HurtsEntities",
+            "applicable": "Falling Block",
+            "description": "Whether or not the falling block will hurt entities. Defaults to true.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "FoxType",
+            "applicable": "Fox",
+            "description": "Sets the type of fox.",
+            "values": [
+                "RED",
+                "SNOW"
+            ]
+        },
+        {
+            "option": "ImmuneToZombification",
+            "applicable": "Hoglin",
+            "description": "Whether or not the hoglin is immune to zombification.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "Huntable",
+            "applicable": "Hoglin",
+            "description": "Whether or not the hoglin is huntable by piglins.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "HorseArmor",
+            "applicable": "Horses, Donkeys, and Mules",
+            "description": "Sets the type of armor the horse has on. Must be lower case.",
+            "values": [
+                "iron",
+                "gold",
+                "diamond"
+            ]
+        },
+        {
+            "option": "CarryingChest",
+            "applicable": "Horses, Donkeys, and Mules",
+            "description": "Whether or not the horse is carrying a chest. Defaults false.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "HorseColor",
+            "applicable": "Horses, Donkeys, and Mules",
+            "description": "Sets the color of the horse. Must be upper case.",
+            "values": [
+                "BLACK",
+                "BROWN",
+                "CHESTNUT",
+                "CREAMY",
+                "DARK_BROWN",
+                "GRAY",
+                "WHITE"
+            ]
+        },
+        {
+            "option": "HorseStyle",
+            "applicable": "Horses, Donkeys, and Mules",
+            "description": "Sets the style of the horse. Must be upper case.",
+            "values": [
+                "BLACK_DOTS",
+                "WHITE",
+                "WHITE_DOTS",
+                "WHITEFIELD"
+            ]
+        },
+        {
+            "option": "Saddled",
+            "applicable": "Horses, Donkeys, Mules and Pigs",
+            "description": "Whether or not the horse is saddled. Defaults false.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "Tamed",
+            "applicable": "Horses, Donkeys, and Mules",
+            "description": "Whether or not the horse is tamed. Defaults false.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "PlayerCreated",
+            "applicable": "Iron Golem",
+            "description": "Whether or not the iron golem is a player created golem.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "MainGene",
+            "applicable": "Panda",
+            "description": "Sets the main gene that the panda can pass to its offspring. Defaults to NORMAL.",
+            "values": [
+                "NORMAL",
+                "AGGRESSIVE",
+                "LAZY",
+                "WORRIED",
+                "PLAYFUL",
+                "WEAK",
+                "BROWN"
+            ]
+        },
+        {
+            "option": "HiddenGene",
+            "applicable": "Panda",
+            "description": "Sets the hidden gene that the panda can pass to its offspring. Defaults to NORMAL.",
+            "values": [
+                "NORMAL",
+                "AGGRESSIVE",
+                "LAZY",
+                "WORRIED",
+                "PLAYFUL",
+                "WEAK",
+                "BROWN"
+            ]
+        },
+        {
+            "option": "AbleToHunt",
+            "applicable": "Piglin",
+            "description": "Whether or not the piglin is able to hunt. Defaults false.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "ImmuneToZombification",
+            "applicable": "Piglin and Piglin Brutes",
+            "description": "Whether or not the piglin is immune to zombification. Defaults to false.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "RabbitType",
+            "applicable": "Rabbit",
+            "description": "Sets the type of rabbit.",
+            "values": [
+                "BLACK",
+                "BLACK_AND_WHITE",
+                "BROWN",
+                "GOLD",
+                "SALT_AND_PEPPER",
+                "THE_KILLER_BUNNY",
+                "WHITE"   
+            ]
+        },
+        {
+            "option": "Baby",
+            "applicable": "Breedable",
+            "description": "Whether or not the animal is a baby. Defaults false.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "IsKillerBunny",
+            "applicable": "Rabbit",
+            "description": "Whether or not the rabbit is a killer bunny. Defaults false.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "Sheared",
+            "applicable": "Sheep",
+            "description": "Whether or not the sheep is sheared. Defaults false.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "PreventBlockInfection",
+            "applicable": "Silverfish",
+            "description": "Whether or not the silverfish is prevented from infecting blocks. Defaults false.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "Derp",
+            "applicable": "Snow Golem",
+            "description": "Whether or not the snow golem has an already sheared pumpkin head. Defaults false.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "PreventSnowFormation",
+            "applicable": "Snow Golem",
+            "description": "Whether or not the snow golem is prevented from forming snow. Defaults false.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "FuseTicks",
+            "applicable": "TNT",
+            "description": "Sets the number of ticks before the TNT explodes. Defaults -1 (instant).",
+            "values": [
+                "number"
+            ]
+        },
+        {
+            "option": "ExplosionYield",
+            "applicable": "TNT",
+            "description": "Determines the strength of the explosion. Defaults -1 or none.",
+            "values": [
+                "number"
+            ]
+        },
+        {
+            "option": "Incendiary",
+            "applicable": "TNT",
+            "description": "Whether or not the TNT is capable of producing flames. Defaults false.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "Pattern",
+            "applicable": "Tropical Fish",
+            "description": "Sets the pattern of the tropical fish.",
+            "values": [
+                "BETTY",
+                "BLOCKFISH",
+                "BRINELY",
+                "CLAYFISH",
+                "DASHER",
+                "FLOPPER",
+                "GLITTER",
+                "KOB",
+                "SNOOPER",
+                "SPOTTY",
+                "STRIPEY",
+                "SUNSTREAK"
+            ]
+        },
+        {
+            "option": "BodyColor",
+            "applicable": "Tropical Fish",
+            "description": "Sets the color of the tropical fish.",
+            "values": [
+                "BLACK",
+                "BLUE",
+                "BROWN",
+                "CYAN",
+                "GRAY",
+                "GREEN",
+                "LIGHT_BLUE",
+                "LIGHT_GRAY",
+                "LIME",
+                "MAGENTA",
+                "ORANGE",
+                "PINK",
+                "PURPLE",
+                "RED",
+                "WHITE",
+                "YELLOW"
+            ]
+        },
+        {
+            "option": "PatternColor",
+            "applicable": "Tropical Fish",
+            "description": "Sets the color of the tropical fish pattern.",
+            "values": [
+                "BLACK",
+                "BLUE",
+                "BROWN",
+                "CYAN",
+                "GRAY",
+                "GREEN",
+                "LIGHT_BLUE",
+                "LIGHT_GRAY",
+                "LIME",
+                "MAGENTA",
+                "ORANGE",
+                "PINK",
+                "PURPLE",
+                "RED",
+                "WHITE",
+                "YELLOW"
+            ]
+        },
+        {
+            "option": "HasTrades",
+            "applicable": "Villager",
+            "description": "Whether or not the villager has trades. Defaults false.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "Profession",
+            "applicable": "Villager and Zombie Villager",
+            "description": "Sets the profession of the villager.",
+            "values": [
+                "ARMORER",
+                "BUTCHER",
+                "CARTOGRAPHER",
+                "CLERIC",
+                "FARMER",
+                "FISHERMAN",
+                "FLETCHER",
+                "LEATHERWORKER",
+                "LIBRARIAN",
+                "MASON",
+                "NITWIT",
+                "NONE",
+                "SHEPHERD",
+                "TOOLSMITH",
+                "WEAPONSMITH"
+            ]
+        },
+        {
+            "option": "Type",
+            "applicable": "Villager",
+            "description": "Sets the type of the villager.",
+            "values": [
+                "DESERT",
+                "JUNGLE",
+                "PLAINS",
+                "SAVANNA",
+                "SNOW",
+                "SWAMP",
+                "TAIGA"
+            ]
+        },
+        {
+            "option": "Level",
+            "applicable": "Villager",
+            "description": "Sets the level of the villager. Applicable 1-5. Level 1 would switch professions. REQUIRED if setting villager professions.",
+            "values": [
+                "number"
+            ]
+        },
+        {
+            "option": "PreventJockeyMounts",
+            "applicable": "Zombie",
+            "description": "Sets whether the zombie will spawn as a jockey. Defaults false.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "PreventTransformation",
+            "applicable": "Zombie",
+            "description": "Sets whether the zombie will be transformed into pigmen/drowned. Defaults false.",
+            "values": [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "Age",
+            "applicable": "Breedable",
+            "description": "-1 for baby, 1 for adult. Defaults to 1.",
+            "values" : [
+                "number"
+            ]
+        },
+        {
+            "option": "AgeLock",
+            "applicable": "Breedable",
+            "description": "Whether or not the breedable is locked to its age. Defaults false.",
+            "values" : [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "Color",
+            "applicable": "Dyeable",
+            "description": "Sets the color of the dyeable mob. Currently sheep and wolves.",
+            "values" : [
+                "COLOR"
+            ]
+        },
+        {
+            "option": "Angry",
+            "applicable": "Wolves and Pigmen",
+            "description": "Sets whether the wolf or pigman is angry. Defaults false.",
+            "values" : [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "PreventSlimeSplit",
+            "applicable": "Slime and Magma Cube",
+            "description": "Sets whether the slime or magma cube will split on death. Defaults false.",
+            "values" : [
+                "true",
+                "false"
+            ]
+        },
+        {
+            "option": "Size",
+            "applicable": "Slime, Magma Cube and Phantom",
+            "description": "Sets the size of the slime or magma cube. Defaults 1. Can go veryyyyyyy big.",
+            "values" : [
+                "number"
+            ]
+        },
+        {
+            "option": "Tameable",
+            "applicable": "Tameable Mobs",
+            "description": "Allows players to tame the mob. Used for wolves, cats and horses.",
+            "values" : [
+                "true",
+                "false"
+            ]
+        }
+    ]
+}
