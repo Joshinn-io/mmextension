@@ -40,15 +40,17 @@ export const getLocation = (document: vscode.TextDocument)  => {
         let cursorLinePos = editor.selection.active.line;
         let line = document.lineAt(cursorLinePos);
         fileLines = fileLines.slice(0, cursorLinePos);
-
+        console.log("cursorLinePos: " + cursorLinePos);
+        console.log("line: " + line.text);
+        console.log("fileLines: " + fileLines);
         // Line, Skill, Attributes
         tryGetLineData(mL, line.text, editor.selection.active.character);
 
         // Value, Option, Key, ID
         tryGetSectionData(mL, fileLines);
+    } else{
+        console.log("No editor");
     }
-
-    console.log(mL);
     return mL;
 
 };
@@ -71,9 +73,6 @@ function tryGetLineData(mythicLoc: MythicLocation, line: string, cursorChar: num
 
 function tryGetSectionData(mythicLoc: MythicLocation, fileLines: string[]) {
     for(let fileLine in fileLines.reverse()) {
-        console.log(fileLine);
-        console.log(fileLines[fileLine].trimEnd());
-        console.log(mythicLoc);
         
         fileLine = fileLines[fileLine].trimEnd();
         const lineDivs = fileLine.split("-").length-1;
@@ -83,19 +82,28 @@ function tryGetSectionData(mythicLoc: MythicLocation, fileLines: string[]) {
         const keySpaces = fileLine.split(":")[0].split(" ").length-1;
         const keyValue = fileLine.split(":")[1];
 
+        console.log("keySpaces: " + keySpaces);
+        console.log("lineDivs: " + lineDivs);
+
         if(mythicLoc.key===undefined && mythicLoc.option===undefined && keySpaces>=4 && lineDivs===0 && lineColons>0) {
+            console.log("Hitting first IF statement");
             mythicLoc.option = fileLine.split(":")[0].trim();
             mythicLoc.value = keyValue.trim();
         }
         if(mythicLoc.key===undefined && keySpaces===2 && lineDivs===0) {
             mythicLoc.key = fileLine.split(":")[0].trim();
+            console.log("Hitting second IF statement");
             if(mythicLoc.value===undefined && keyValue) {
+                console.log("Hitting third IF statement");
                 mythicLoc.value = keyValue.trim();
             }
         }
         if(mythicLoc.id===undefined && keySpaces===0 && lineEndChar===":") {
+            console.log("Hitting fourth IF statement");
             mythicLoc.id = fileLine.slice(0, fileLine.length-1);
             break;
         }
     }
+    console.log("Key at end: " + mythicLoc.key);
+    console.log(mythicLoc);
 }
