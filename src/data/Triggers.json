@@ -1,0 +1,224 @@
+{
+    "triggers": [
+        {
+            "trigger": "~onCombat",
+            "description": "Default trigger, when the mob does any combat action."
+        },
+        {
+            "trigger": "~onAttack",
+            "description": "When the mob hits something/attacks something."
+        },
+        {
+            "trigger": "~onDamaged",
+            "description": "When the mob is damaged."
+        },
+        {
+            "trigger": "~onSpawn",
+            "description": "When the mob spawns in."
+        },
+        {
+            "trigger": "~onDespawn",
+            "description":"When the mob despawns."
+        },
+        {
+            "trigger": "~onFirstSpawn",
+            "description": "Triggered the first time a mob is spawned from a spawner."
+        },
+        {
+            "trigger": "~onLoad",
+            "description": "When the mob is loaded, spawning or loaded after a restart."
+        },
+        {
+            "trigger": "~onDeath",
+            "description": "When the mob dies."
+        },
+        {
+            "trigger": "~onTimer:#",
+            "description": "Every # ticks, where # is the interval in ticks. Not recommended to have a million 1 tick timers."
+        },
+        {
+            "trigger": "~onInteract",
+            "description": "When the mob is interacted with (right click by default)."
+        },
+        {
+            "trigger": "~onKill",
+            "description": "When the mob kills something."
+        },
+        {
+            "trigger": "~onKillPlayer",
+            "description": "When the mob kills a player."
+        },
+        {
+            "trigger": "~onPlayerDeath",
+            "description": "When a player dies for any reason."
+        },
+        {
+            "trigger": "~onEnterCombat",
+            "description": "When the mob enters combat. Requires threat tables to be on."
+        },
+        {
+            "trigger": "~onDropCombat",
+            "description": "When the mob drops combat. Requires threat tables to be on."
+        },
+        {
+            "trigger": "~onChangeCombat",
+            "description": "When the mob changes targets. Requires threat tables to be on."
+        },
+        {
+            "trigger": "~onExplode",
+            "description": "When the mob explodes (typically only used on creepers)."
+        },
+        {
+            "trigger": "~onTeleport",
+            "description": "When the mob teleports (typically only used on endermen)."
+        },
+        {
+            "trigger": "~onSignal",
+            "description": "When the mob recieves any signal."
+        },
+        {
+            "trigger": "~onSignal:[signal]",
+            "description": "When the mob recieves [signal] signal. Note: the [] are not actually needed."
+        },
+        {
+            "trigger": "~onTame",
+            "description": "When the mob gets tamed."
+        },
+        {
+            "trigger": "~onBlockBreak",
+            "description": "When the player breaks a block. CRUCIBLE ONLY."
+        },
+        {
+            "trigger": "~onBlockPlace",
+            "description": "When the player places a block. CRUCIBLE ONLY."
+        },
+        {
+            "trigger": "~onConsume",
+            "description": "When the item (food or potion) gets eaten. CRUCIBLE ONLY."
+        },
+        {
+            "trigger": "~onCrouch",
+            "description": "When the player crouches. CRUCIBLE ONLY."
+        },
+        {
+            "trigger": "~onUnCrouch",
+            "description": "When the player uncrouches. CRUCIBLE ONLY."
+        },
+        {
+            "trigger": "~onDamaged",
+            "description": "When the player is damaged. CRUCIBLE ONLY."
+        },
+        {
+            "trigger": "~onDeath",
+            "description": "When the player dies. CRUCIBLE ONLY."
+        },
+        {
+            "trigger": "~onEquip",
+            "description": "When the item is equipped. CRUCIBLE ONLY."
+        },
+        {
+            "trigger": "~onUnEquip",
+            "description": "When the item is unequipped. CRUCIBLE ONLY."
+        },
+        {
+            "trigger": "~onInteract",
+            "description": "When the player interacts with an entity. CRUCIBLE ONLY."
+        },
+        {
+            "trigger": "~onBowHit",
+            "description": "When the player hits an entity with an arrow. CRUCIBLE ONLY."
+        },
+        {
+            "trigger": "~onPotionSplash",
+            "description": "Triggered if the item is a potion that was thrown. CRUCIBLE ONLY."
+        },
+        {
+            "trigger": "~onRightClick",
+            "description": "When the player right clicks. CRUCIBLE ONLY."
+        },
+        {
+            "trigger": "~onShoot",
+            "description": "When the player shoots a bow. CRUCIBLE ONLY."
+        },
+        {
+            "trigger": "~onSpawn",
+            "description": "When the player logs in or respawns. CRUCIBLE ONLY."
+        },
+        {
+            "trigger": "~onSwing",
+            "description": "When the player left clicks. CRUCIBLE ONLY."
+        },
+        {
+            "trigger": "~onUse",
+            "description": "When the player right clicks while holding the item. CRUCIBLE ONLY."
+        },
+        {
+            "trigger": "~onFish",
+            "description": "When the player right clicks while holding a fishing rod. CRUCIBLE ONLY."
+        },
+        {
+            "trigger": "~onFishBite",
+            "description": "When the fish bites the hook from a fishing rod. CRUCIBLE ONLY."
+        },
+        {
+            "trigger": "~onFishCatch",
+            "description": "When the fish latches onto the hook from a fishing rod. CRUCIBLE ONLY."
+        },
+        {
+            "trigger": "~onFishGrab",
+            "description": "When the player right clicks while holding the fishing rod with a latched fish. CRUCIBLE ONLY."
+        },
+        {
+            "trigger": "~onFishGround",
+            "description": "When the bobber is stuck in the ground. CRUCIBLE ONLY."
+        },
+        {
+            "trigger": "~onFishingReel",
+            "description": "When the player reels in a fishing rod with no fish on the other end. CRUCIBLE ONLY."
+        },
+        {
+            "trigger": "~onFishingFail",
+            "description": "When the player fails a fish attempt usually due to poor timing. CRUCIBLE ONLY."
+        },
+        {
+            "trigger": "~onPressQ",
+            "description": "When the player presses Q to drop the item. Requires Protocollib. CRUCIBLE ONLY."
+        },
+        {
+            "trigger": "~onPressCtrlQ",
+            "description": "When the player presses CTRL + Q to drop the item. Requires Protocollib. CRUCIBLE ONLY."
+        },
+        {
+            "trigger": "~onPressF",
+            "description": "When the player presses F to swap item in hand. Requires Protocollib. CRUCIBLE ONLY."
+        },
+        {
+            "trigger": "~onPress",
+            "description": "When the player presses a key. Requires MythicKeysPlugin for the server and MythicKeys mod for the client."
+        },
+        {
+            "trigger": "~onRelease",
+            "description": "When the player releases a key. Requires MythicKeysPlugin for the server and MythicKeys mod for the client."   
+        },
+        {
+            "trigger": "~onJoin",
+            "description": "Whenn the player joins the server"
+        },
+        {
+            "trigger": "~onRespawn",
+            "description": "When the player respawns"
+        },
+        {
+            "trigger": "~onPickup",
+            "description": "When the player picks up the item."
+        },
+        {
+            "trigger": "~onBlockRotate",
+            "description": "When the furniture is rotated. CRUCIBLE ONLY."
+        },
+        {
+            "trigger": "~onBlockSit",
+            "description": "When someone sits on the furniture. CRUCIBLE ONLY."
+        }
+    ]
+}

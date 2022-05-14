@@ -1,0 +1,1857 @@
+{
+    "targeters": [
+      {
+        "targeter": "@BlocksInChunk",
+        "shorthand": [
+  
+        ],
+        "description": "Targets all blocks in the targeted chunk.",
+        "attributes": [
+          {
+            "attribute": "noair",
+            "aliases": [
+              "na"
+            ],
+            "description": "Whether to check for air or not. Defaults to true.",
+            "values": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "attribute": "onlyair",
+            "aliases": [
+              "oa"
+            ],
+            "description": "Whether to only check for air or not. Defaults to false.",
+            "values": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "attribute": "nearorigin",
+            "aliases": [
+              "no"
+            ],
+            "description": "Whether to check near the origin or not. Defaults to false.",
+            "values": [
+              "true",
+              "false"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@BlocksInRadius",
+        "shorthand": [
+  
+        ],
+        "description": "Targets all blocks in the radius of the inherited target.",
+        "attributes": [
+          {
+            "attribute": "radius",
+            "aliases": [
+              "r"
+            ],
+            "description": "Radius to check. Defaults to 2.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "radiusy",
+            "aliases": [
+              "ry",
+              "yradius",
+              "yr"
+            ],
+            "description": "Radius to check on the y axis. Defaults to radius.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "noise",
+            "aliases": [
+              "n"
+            ],
+            "description": "A percentage between 0 and 100, used to have a random selection. Defaults to 0.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "shape",
+            "aliases": [
+              "s"
+            ],
+            "description": "What shape the radius will determine. Defaults to SPHERE.",
+            "values": [
+              "SPHERE"
+            ]
+          },
+          {
+            "attribute": "noair",
+            "aliases": [
+              "na"
+            ],
+            "description": "Whether to check for air or not. Defaults to true.",
+            "values": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "attribute": "onlyair",
+            "aliases": [
+              "oa"
+            ],
+            "description": "Whether to only check for air or not. Defaults to false.",
+            "values": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "attribute": "nearorigin",
+            "aliases": [
+              "no"
+            ],
+            "description": "Whether to check near the origin or not. Defaults to false.",
+            "values": [
+              "true",
+              "false"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@BlocksNearOrigin",
+        "shorthand": [
+  
+        ],
+        "description": "Targets all blocks in the radius of the inherited target.",
+        "attributes": [
+          {
+            "attribute": "radius",
+            "aliases": [
+              "r"
+            ],
+            "description": "Radius to check. Defaults to 2.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "radiusy",
+            "aliases": [
+              "ry",
+              "yradius",
+              "yr"
+            ],
+            "description": "Radius to check on the y axis. Defaults to radius.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "noise",
+            "aliases": [
+              "n"
+            ],
+            "description": "A percentage between 0 and 100, used to have a random selection. Defaults to 0.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "shape",
+            "aliases": [
+              "s"
+            ],
+            "description": "What shape the radius will determine. Defaults to SPHERE.",
+            "values": [
+              "SPHERE"
+            ]
+          },
+          {
+            "attribute": "noair",
+            "aliases": [
+              "na"
+            ],
+            "description": "Whether to check for air or not. Defaults to true.",
+            "values": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "attribute": "onlyair",
+            "aliases": [
+              "oa"
+            ],
+            "description": "Whether to only check for air or not. Defaults to false.",
+            "values": [
+              "true",
+              "false"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@CasterSpawnLocation",
+        "shorthand": [
+          "@CasterSpawn"
+        ],
+        "description": "Targets the caster's spawn location.",
+        "attributes": null
+      },
+      {
+        "targeter": "@Children",
+        "shorthand": [
+          "@Child",
+          "@Summons"
+        ],
+        "description": "Targets all entities the caster has summoned.",
+        "attributes": null
+      },
+      {
+        "targeter": "@Cone",
+        "shorthand": [
+  
+        ],
+        "description": "Targets random points in a cone in-front of the caster.",
+        "attributes": [
+          {
+            "attribute": "angle",
+            "aliases": [
+              "a"
+            ],
+            "description": "Angle of the cone. Defaults to 90 degrees.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "range",
+            "aliases": [
+              "r"
+            ],
+            "description": "How far the cone will extend. Defaults to 16 blocks.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "points",
+            "aliases": [
+              "p"
+            ],
+            "description": "How many points will be randomly selected in the cone. Defaults to (angle*range)/10.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "rotation",
+            "aliases": [
+              "rot"
+            ],
+            "description": "Rotation offset from the caster's front. Defaults to 0.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "yoffset",
+            "aliases": [
+              "yo",
+              "y"
+            ],
+            "description": "How much the cone is offset on the y-axis. Defaults to 0.",
+            "values": [
+              "number"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@EntitiesInRadius",
+        "shorthand": [
+          "@LivingEntitiesInRadius",
+          "@LivingInRadius",
+          "@AllInRadius",
+          "@EIR"
+        ],
+        "description": "Targets all entities in a radius around the caster.",
+        "attributes": [
+          {
+            "attribute": "radius",
+            "aliases": [
+              "r"
+            ],
+            "description": "The radius to check for entities. Defaults to 5 blocks.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "livingonly",
+            "aliases": [
+              "living",
+              "l"
+            ],
+            "description": "Whether to only target living entities or not. Defaults to true.",
+            "values": [
+              "true",
+              "false"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@EntitiesInRing",
+        "shorthand": [
+          "@EIRR"
+        ],
+        "description": "Targets all entities in a ring around the caster.",
+        "attributes": [
+          {
+            "attribute": "min",
+            "aliases": [
+              "minrange"
+            ],
+            "description": "The minimum radius to check for entities. Defaults to 5 blocks.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "max",
+            "aliases": [
+              "maxrange"
+            ],
+            "description": "The maximum radius to check for entities. Defaults to 10 blocks.",
+            "values": [
+              "number"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@EntitiesNearOrigin",
+        "shorthand": [
+          "@NearOrigin",
+          "@ENO"
+        ],
+        "description": "Targets all entities in a radius around the origin.",
+        "attributes": [
+          {
+            "attribute": "radius",
+            "aliases": [
+              "r"
+            ],
+            "description": "The radius to check for entities. Defaults to 5 blocks.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "livingonly",
+            "aliases": [
+              "living",
+              "l"
+            ],
+            "description": "Whether to only target living entities or not. Defaults to true.",
+            "values": [
+              "true",
+              "false"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@Father",
+        "shorthand": [
+          "@Dad",
+          "@Daddy"
+        ],
+        "description": "Targets one of the parents of the mob.",
+        "attributes": null
+      },
+      {
+        "targeter": "@FloorOfTargets",
+        "shorthand": [
+          "@FOT"
+        ],
+        "description": "Targets the first solid block below all inherited targets",
+        "attributes": [
+          {
+            "attribute": "tries",
+            "aliases": [
+              "t",
+              "max",
+              "m"
+            ],
+            "description": "The number of tries to find a solid block. Defaults to 3 tries.",
+            "values": [
+              "number"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@Forward",
+        "shorthand": [
+  
+        ],
+        "description": "Targets a point in-front of the caster.",
+        "attributes": [
+          {
+            "attribute": "forward",
+            "aliases": [
+              "f",
+              "amount",
+              "a"
+            ],
+            "description": "The distance to target in-front of the caster. Defaults to 5 blocks.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "rotate",
+            "aliases": [
+              "rot"
+            ],
+            "description": "The radian rotation to offset from the caster. Defaults to 0.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "useeyelocation",
+            "aliases": [
+              "uel"
+            ],
+            "description": "Whether to start from the caster's eye location or not. Defaults to false.",
+            "values": [
+              "true",
+              "false"
+            ]
+          },
+          {
+            "attribute": "lockpitch",
+            "aliases": [
+  
+            ],
+            "description": "Whether to lock the pitch rotation. Defaults to false.",
+            "values": [
+              "true",
+              "false"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@ForwardWall",
+        "shorthand": [
+  
+        ],
+        "description": "Targets a wall of points in-front of the caster.",
+        "attributes": [
+          {
+            "attribute": "forward",
+            "aliases": [
+              "f",
+              "amount",
+              "a"
+            ],
+            "description": "The distance to target in-front of the caster. Defaults to 5 blocks.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "yoffset",
+            "aliases": [
+              "y"
+            ],
+            "description": "The block offset along the y-axis. Defaults to 0 blocks.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "height",
+            "aliases": [
+              "h"
+            ],
+            "description": "The height of the wall. Defaults to 2 blocks.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "width",
+            "aliases": [
+              "w"
+            ],
+            "description": "The width of the wall. Defaults to 3 blocks.",
+            "values": [
+              "number"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@ItemsInRadius",
+        "shorthand": [
+          "@IIR"
+        ],
+        "description": "Targets all items in a radius around the caster.",
+        "attributes": [
+          {
+            "attribute": "radius",
+            "aliases": [
+              "r"
+            ],
+            "description": "The radius to check for items. Defaults to 5 blocks.",
+            "values": [
+              "number"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@ItemsNearOrigin",
+        "shorthand": [
+          "@INO"
+        ],
+        "description": "Targets all items in a radius around the origin.",
+        "attributes": [
+          {
+            "attribute": "radius",
+            "aliases": [
+              "r"
+            ],
+            "description": "The radius to check for items. Defaults to 5 blocks.",
+            "values": [
+              "number"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@Line",
+        "shorthand": [
+  
+        ],
+        "description": "Targets points in a line from the caster to the inherited target location.",
+        "attributes": [
+          {
+            "attribute": "radius",
+            "aliases": [
+              "r"
+            ],
+            "description": "The width of the line as a radius. Defaults to 1 blocks.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "fromorigin",
+            "aliases": [
+              "fo"
+            ],
+            "description": "Whether to check from the origin instead of the caster. Defaults to false.",
+            "values": [
+              "true",
+              "false"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@LivingInCone",
+        "shorthand": [
+          "@EntitiesInCone",
+          "@LivingEntitiesInCone",
+          "@LEIC",
+          "@EIC"
+        ],
+        "description": "Targets all entities in a cone in-front of the caster.",
+        "attributes": [
+          {
+            "attribute": "angle",
+            "aliases": [
+              "a"
+            ],
+            "description": "Angle of the cone. Defaults to 90 degrees.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "range",
+            "aliases": [
+              "r"
+            ],
+            "description": "How far the cone will extend. Defaults to 16 blocks.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "rotation",
+            "aliases": [
+              "rot"
+            ],
+            "description": "Rotation offset from the caster's front. Defaults to 0.",
+            "values": [
+              "number"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@LivingInLine",
+        "shorthand": [
+          "EntitiesInLine",
+          "LivingEntitiesInLine",
+          "LEIL",
+          "EIL"
+        ],
+        "description": "Targets all entities in a line from the caster to the inherited target location.",
+        "attributes": [
+          {
+            "attribute": "radius",
+            "aliases": [
+              "r"
+            ],
+            "description": "The width of the line as a radius. Defaults to 1 blocks.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "fromorigin",
+            "aliases": [
+              "fo"
+            ],
+            "description": "Whether to check from the origin instead of the caster. Defaults to false.",
+            "values": [
+              "true",
+              "false"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@LivingNearTargetLocation",
+        "shorthand": [
+          "LNTL",
+          "ENTL",
+          "ENT"
+        ],
+        "description": "Targets all entities near the inherited target location.",
+        "attributes": [
+          {
+            "attribute": "radius",
+            "aliases": [
+              "r"
+            ],
+            "description": "The radius to check around the target. Defaults to 5 blocks.",
+            "values": [
+              "number"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@LocationsOfTargets",
+        "shorthand": [
+          "LocationOfTarget",
+          "LOT"
+        ],
+        "description": "Targets the locations of the inherited targets.",
+        "attributes": null
+      },
+      {
+        "targeter": "@Location",
+        "shorthand": [
+  
+        ],
+        "description": "Targets the location provided by the coordinates.",
+        "attributes": [
+          {
+            "attribute": "location",
+            "aliases": [
+              "loc",
+              "l",
+              "c"
+            ],
+            "description": "The coordinate to target. Has no default value.",
+            "values": [
+              "x,y,z",
+              "x,y,z,yaw,pitch"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@MobsInRadius",
+        "shorthand": [
+          "@MIR"
+        ],
+        "description": "Targets specific mythic entities in a radius around the caster.",
+        "attributes": [
+          {
+            "attribute": "radius",
+            "aliases": [
+              "r"
+            ],
+            "description": "The radius to check for entities. Defaults to 5 blocks.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "types",
+            "aliases": [
+              "type",
+              "t"
+            ],
+            "description": "A list of mythic entities to check for. Defaults to none.",
+            "values": [
+              "mob1",
+              "mob1, mob2, mob3"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@MobsNearOrigin",
+        "shorthand": [
+  
+        ],
+        "description": "Targets specific mythic entities in a radius around the origin.",
+        "attributes": [
+          {
+            "attribute": "radius",
+            "aliases": [
+              "r"
+            ],
+            "description": "The radius to check for entities. Defaults to 5 blocks.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "types",
+            "aliases": [
+              "type",
+              "t"
+            ],
+            "description": "A list of mythic entities to check for. Defaults to none.",
+            "values": [
+              "mob1",
+              "mob1, mob2, mob3"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@Mother",
+        "shorthand": [
+          "@Mom",
+          "@Mommy"
+        ],
+        "description": "Targets one of the parents of the mob.",
+        "attributes": null
+      },
+      {
+        "targeter": "@Mount",
+        "shorthand": [
+          "@Vehicle"
+        ],
+        "description": "Targets the entity the caster is currently riding.",
+        "attributes": null
+      },
+      {
+        "targeter": "@NearestPlayer",
+        "shorthand": [
+  
+        ],
+        "description": "Targets the nearest player within a given radius around the caster..",
+        "attributes": [
+          {
+            "attribute": "radius",
+            "aliases": [
+              "r"
+            ],
+            "description": "Radius to check for players. Defaults to 5 blocks.",
+            "values": [
+              "number"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@NearestStructure",
+        "shorthand": [
+  
+        ],
+        "description": "Targets the structure nearest to the caster.",
+        "attributes": [
+          {
+            "attribute": "type",
+            "aliases": [
+              "t"
+            ],
+            "description": "The structure to check for. Defaults to STRONGHOLD.",
+            "values": [
+              "STRONGHOLD"
+            ]
+          },
+          {
+            "attribute": "radius",
+            "aliases": [
+              "r"
+            ],
+            "description": "The radius around the caster to check. Defaults to 5000 blocks.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "unexplored",
+            "aliases": [
+              "u"
+            ],
+            "description": "Whether the targeted structure should be unexplored or not. Defaults to false.",
+            "values": [
+              "true",
+              "false"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@NotLivingNearOrigin",
+        "shorthand": [
+          "@NLNO",
+          "@NonLivingNearOrigin"
+        ],
+        "description": "Targets all non-living entities near the origin.",
+        "attributes": [
+          {
+            "attribute": "radius",
+            "aliases": [
+              "r"
+            ],
+            "description": "The radius to check for entities. Defaults to 5 blocks.",
+            "values": [
+              "number"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@ObstructingBlock",
+        "shorthand": [
+  
+        ],
+        "description": "Tries to target the solid blocks in-front of the caster.",
+        "attributes": null
+      },
+      {
+        "targeter": "@Origin",
+        "shorthand": [
+          "@Source"
+        ],
+        "description": "Targets the origin of the current skill.",
+        "attributes": null
+      },
+      {
+        "targeter": "@Owner",
+        "shorthand": [
+  
+        ],
+        "description": "Targets the caster's owner.",
+        "attributes": null
+      },
+      {
+        "targeter": "@Parent",
+        "shorthand": [
+          "@Summoner"
+        ],
+        "description": "Targets the entity that summoned the caster.",
+        "attributes": null
+      },
+      {
+        "targeter": "@Passenger",
+        "shorthand": [
+  
+        ],
+        "description": "Targets the entity currently riding the caster.",
+        "attributes": null
+      },
+      {
+        "targeter": "@PlayerByName",
+        "shorthand": [
+          "@SpecificPlayer"
+        ],
+        "description": "Targets the player with the given name.",
+        "attributes": [
+          {
+            "attribute": "name",
+            "aliases": [
+              "n"
+            ],
+            "description": "Player name to target. Defaults to CarsonJF",
+            "values": [
+              "CarsonJF"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@PlayerLocationsInRadius",
+        "shorthand": [
+          "@PLIR"
+        ],
+        "description": "Targets locations of players in a radius around the caster.",
+        "attributes": [
+          {
+            "attribute": "radius",
+            "aliases": [
+              "r"
+            ],
+            "description": "The radius to check for players. Defaults to 5 blocks.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "yoffset",
+            "aliases": [
+              "y"
+            ],
+            "description": "The value added to the y-axis of the player locations. Defaults to 0 blocks.",
+            "values": [
+              "number"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@PlayersInRadius",
+        "shorthand": [
+          "@PIR"
+        ],
+        "description": "Targets players in a radius around the caster.",
+        "attributes": [
+          {
+            "attribute": "radius",
+            "aliases": [
+              "r"
+            ],
+            "description": "The radius to check for players. Defaults to 5 blocks.",
+            "values": [
+              "number"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@PlayersInRing",
+        "shorthand": [
+  
+        ],
+        "description": "Targets all players in a ring around the caster.",
+        "attributes": [
+          {
+            "attribute": "min",
+            "aliases": [
+              "minrange"
+            ],
+            "description": "The minimum radius to check for players. Defaults to 5 blocks.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "max",
+            "aliases": [
+              "maxrange"
+            ],
+            "description": "The maximum radius to check for players. Defaults to 10 blocks.",
+            "values": [
+              "number"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@PlayersNearOrigin",
+        "shorthand": [
+  
+        ],
+        "description": "Targets players in a radius around the origin.",
+        "attributes": [
+          {
+            "attribute": "radius",
+            "aliases": [
+              "r"
+            ],
+            "description": "The radius to check for players. Defaults to 5 blocks.",
+            "values": [
+              "number"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@PlayersNearTargetLocation",
+        "shorthand": [
+          "@PNTL"
+        ],
+        "description": "Targets players in a radius around the inherited target location.",
+        "attributes": [
+          {
+            "attribute": "radius",
+            "aliases": [
+              "r"
+            ],
+            "description": "The radius to check for players. Defaults to 5 blocks.",
+            "values": [
+              "number"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@PlayersOnServer",
+        "shorthand": [
+          "@Server"
+        ],
+        "description": "Targets all players on the server.",
+        "attributes": null
+      },
+      {
+        "targeter": "@ProjectileForward",
+        "shorthand": [
+  
+        ],
+        "description": "Targets a point in-front of the casting projectile.",
+        "attributes": [
+          {
+            "attribute": "forward",
+            "aliases": [
+              "f",
+              "amount",
+              "a"
+            ],
+            "description": "The distance to target in-front of the projectile. Defaults to 1 blocks.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "rotate",
+            "aliases": [
+              "rot"
+            ],
+            "description": "The radian rotation to offset from the projectile. Defaults to 0.",
+            "values": [
+              "number"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@RandomLocationsNearOrigin",
+        "shorthand": [
+          "@RLO",
+          "@RandomLocationsOrigin",
+          "@RLNO"
+        ],
+        "description": "Targets random locations around the origin.",
+        "attributes": [
+          {
+            "attribute": "amount",
+            "aliases": [
+              "a"
+            ],
+            "description": "The number of locations to select. Defaults to 5.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "radius",
+            "aliases": [
+              "r",
+              "maxradius",
+              "maxr"
+            ],
+            "description": "The max radius to select from. Defaults to 5.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "minradius",
+            "aliases": [
+              "minr"
+            ],
+            "description": "The min radius to select from. Defaults to 0.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "spacing",
+            "aliases": [
+              "s"
+            ],
+            "description": "Prevents other locations from being selected in a radius around a location. Defaults to 0.",
+            "values": [
+              "number"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@RandomLocationsNearTargets",
+        "shorthand": [
+          "@RandomLocationsNearTarget",
+          "@RandomLocationsNearTargetEntities",
+          "@RandomLocationsNearTargetLocations",
+          "@RLNT",
+          "@RLNTE",
+          "@RLNTL"
+        ],
+        "description": "Targets random locations around the inherited targets.",
+        "attributes": [
+          {
+            "attribute": "amount",
+            "aliases": [
+              "a"
+            ],
+            "description": "The number of locations to select. Defaults to 5.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "radius",
+            "aliases": [
+              "r",
+              "maxradius",
+              "maxr"
+            ],
+            "description": "The max radius to select from. Defaults to 5.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "minradius",
+            "aliases": [
+              "minr"
+            ],
+            "description": "The min radius to select from. Defaults to 0.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "spacing",
+            "aliases": [
+              "s"
+            ],
+            "description": "Prevents other locations from being selected in a radius around a location. Defaults to 0.",
+            "values": [
+              "number"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@RandomLocationsNearCaster",
+        "shorthand": [
+          "@RLNC",
+          "@RandomLocations"
+        ],
+        "description": "Targets random locations around the caster.",
+        "attributes": [
+          {
+            "attribute": "amount",
+            "aliases": [
+              "a"
+            ],
+            "description": "The number of locations to select. Defaults to 5.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "radius",
+            "aliases": [
+              "r",
+              "maxradius",
+              "maxr"
+            ],
+            "description": "The max radius to select from. Defaults to 5.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "minradius",
+            "aliases": [
+              "minr"
+            ],
+            "description": "The min radius to select from. Defaults to 0.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "spacing",
+            "aliases": [
+              "s"
+            ],
+            "description": "Prevents other locations from being selected in a radius around a location. Defaults to 0.",
+            "values": [
+              "number"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@RandomRingPoint",
+        "shorthand": [
+  
+        ],
+        "description": "Targets random points in a ring around the caster.",
+        "attributes": [
+          {
+            "attribute": "amount",
+            "aliases": [
+              "a"
+            ],
+            "description": "The number of locations to select. Defaults to 1.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "radius",
+            "aliases": [
+              "r"
+            ],
+            "description": "The radius to select from. Defaults to 5.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "points",
+            "aliases": [
+              "p"
+            ],
+            "description": "The min radius to select from. Defaults to 10.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "rotationx",
+            "aliases": [
+              "rotx",
+              "rx"
+            ],
+            "description": "The rotation of the ring around the x-axis in radians. Defaults to 0.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "rotationy",
+            "aliases": [
+              "roty",
+              "ry"
+            ],
+            "description": "The rotation of the ring around the y-axis in radians. Defaults to 0.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "rotationz",
+            "aliases": [
+              "rotz",
+              "rz"
+            ],
+            "description": "The rotation of the ring around the z-axis in radians. Defaults to 0.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "offsetx",
+            "aliases": [
+              "offx",
+              "ox"
+            ],
+            "description": "The number of blocks to offset the ring along the x-axis by. Defaults to 0.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "offsety",
+            "aliases": [
+              "offy",
+              "oy"
+            ],
+            "description": "The number of blocks to offset the ring along the y-axis by. Defaults to 0.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "offsetz",
+            "aliases": [
+              "offz",
+              "oz"
+            ],
+            "description": "The number of blocks to offset the ring along the z-axis by. Defaults to 0.",
+            "values": [
+              "number"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@RingAroundOrigin",
+        "shorthand": [
+          "@RingOrigin",
+          "@RAO"
+        ],
+        "description": "Targets points in a ring around the origin.",
+        "attributes": [
+          {
+            "attribute": "radius",
+            "aliases": [
+              "r"
+            ],
+            "description": "The radius to select from. Defaults to 5.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "points",
+            "aliases": [
+              "p"
+            ],
+            "description": "The min radius to select from. Defaults to 10.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "rotationx",
+            "aliases": [
+              "rotx",
+              "rx"
+            ],
+            "description": "The rotation of the ring around the x-axis in radians. Defaults to 0.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "rotationy",
+            "aliases": [
+              "roty",
+              "ry"
+            ],
+            "description": "The rotation of the ring around the y-axis in radians. Defaults to 0.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "rotationz",
+            "aliases": [
+              "rotz",
+              "rz"
+            ],
+            "description": "The rotation of the ring around the z-axis in radians. Defaults to 0.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "offsetx",
+            "aliases": [
+              "offx",
+              "ox"
+            ],
+            "description": "The number of blocks to offset the ring along the x-axis by. Defaults to 0.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "offsety",
+            "aliases": [
+              "offy",
+              "oy"
+            ],
+            "description": "The number of blocks to offset the ring along the y-axis by. Defaults to 0.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "offsetz",
+            "aliases": [
+              "offz",
+              "oz"
+            ],
+            "description": "The number of blocks to offset the ring along the z-axis by. Defaults to 0.",
+            "values": [
+              "number"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@Ring",
+        "shorthand": [
+  
+        ],
+        "description": "Targets points in a ring around the caster.",
+        "attributes": [
+          {
+            "attribute": "radius",
+            "aliases": [
+              "r"
+            ],
+            "description": "The radius to select from. Defaults to 5.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "points",
+            "aliases": [
+              "p"
+            ],
+            "description": "The min radius to select from. Defaults to 10.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "rotationx",
+            "aliases": [
+              "rotx",
+              "rx"
+            ],
+            "description": "The rotation of the ring around the x-axis in radians. Defaults to 0.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "rotationy",
+            "aliases": [
+              "roty",
+              "ry"
+            ],
+            "description": "The rotation of the ring around the y-axis in radians. Defaults to 0.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "rotationz",
+            "aliases": [
+              "rotz",
+              "rz"
+            ],
+            "description": "The rotation of the ring around the z-axis in radians. Defaults to 0.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "offsetx",
+            "aliases": [
+              "offx",
+              "ox"
+            ],
+            "description": "The number of blocks to offset the ring along the x-axis by. Defaults to 0.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "offsety",
+            "aliases": [
+              "offy",
+              "oy"
+            ],
+            "description": "The number of blocks to offset the ring along the y-axis by. Defaults to 0.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "offsetz",
+            "aliases": [
+              "offz",
+              "oz"
+            ],
+            "description": "The number of blocks to offset the ring along the z-axis by. Defaults to 0.",
+            "values": [
+              "number"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@SelfEyeLocation",
+        "shorthand": [
+          "@EyeDirection",
+          "@CasterEyeLocation",
+          "@BossEyeLocation",
+          "@MobEyeLocation"
+        ],
+        "description": "Targets the eye location of the caster.",
+        "attributes": null
+      },
+      {
+        "targeter": "@SelfLocation",
+        "shorthand": [
+          "@CasterLocation",
+          "@BossLocation",
+          "@BobLocation"
+        ],
+        "description": "Targets the location of the caster.",
+        "attributes": null
+      },
+      {
+        "targeter": "@Self",
+        "shorthand": [
+          "@Caster",
+          "@Boss",
+          "@Mob"
+        ],
+        "description": "Targets the entity that casted the skill or mechanic.",
+        "attributes": null
+      },
+      {
+        "targeter": "@Siblings",
+        "shorthand": [
+          "@Sibling",
+          "@Brothers",
+          "@Sisters"
+        ],
+        "description": "Targets all entities summoned by the caster's summoner.",
+        "attributes": null
+      },
+      {
+        "targeter": "@Spawners",
+        "shorthand": [
+  
+        ],
+        "description": "Targets the location of the specified spawners.",
+        "attributes": [
+          {
+            "attribute": "spawners",
+            "aliases": [
+              "spawner",
+              "s"
+            ],
+            "description": "The spawners to target. Has no default value.",
+            "values": [
+              "mob1",
+              "mob1, mob2, mob3"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@SpawnLocation",
+        "shorthand": [
+  
+        ],
+        "description": "Targets the world spawn location.",
+        "attributes": null
+      },
+      {
+        "targeter": "@Sphere",
+        "shorthand": [
+  
+        ],
+        "description": "Targets points in a sphere around the caster.",
+        "attributes": [
+          {
+            "attribute": "radius",
+            "aliases": [
+              "r"
+            ],
+            "description": "The radius to select from. Defaults to 5.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "points",
+            "aliases": [
+              "p"
+            ],
+            "description": "The min radius to select from. Defaults to 10.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "yoffset",
+            "aliases": [
+              "y"
+            ],
+            "description": "The number of blocks to offset the sphere along the y-axis by. Defaults to 0.",
+            "values": [
+              "number"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@TargetBlock",
+        "shorthand": [
+  
+        ],
+        "description": "Targets the block the caster is looking at.",
+        "attributes": [
+          {
+            "attribute": "maxdistance",
+            "aliases": [
+              "maxdistance",
+              "max",
+              "distance",
+              "d"
+            ],
+            "description": "The maximum distance to check. Defaults to 64.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "ignoretransparent",
+            "aliases": [
+              "it"
+            ],
+            "description": "Whether to ignore transparent blocks or not. Defaults to true.",
+            "values": [
+              "true",
+              "false"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@TargetedLocation",
+        "shorthand": [
+          "@TargetedLocations",
+          "@TargetedLoc"
+        ],
+        "description": "Targets the locations of the inherited target locations.",
+        "attributes": null
+      },
+      {
+        "targeter": "@TargetedTarget",
+        "shorthand": [
+          "@Targeted"
+        ],
+        "description": "Targets the inherited targets.",
+        "attributes": null
+      },
+      {
+        "targeter": "@TargetLocation",
+        "shorthand": [
+  
+        ],
+        "description": "Targets the location the caster is looking at.",
+        "attributes": [
+          {
+            "attribute": "maxdistance",
+            "aliases": [
+              "maxdistance",
+              "max",
+              "distance",
+              "d"
+            ],
+            "description": "The maximum distance to check. Defaults to 64.",
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "attribute": "ignoretransparent",
+            "aliases": [
+              "it"
+            ],
+            "description": "Whether to ignore transparent blocks or not. Defaults to true.",
+            "values": [
+              "true",
+              "false"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@Target",
+        "shorthand": [
+          "@T"
+        ],
+        "description": "Targets the entity the caster is looking at.",
+        "attributes": null
+      },
+      {
+        "targeter": "@ThreatTablePlayers",
+        "shorthand": [
+  
+        ],
+        "description": "Targets all players on the caster's Threat Table.",
+        "attributes": null
+      },
+      {
+        "targeter": "@RandomThreatTargetLocation",
+        "shorthand": [
+          "@RTTL"
+        ],
+        "description": "Targets the location of a random entity on the caster's Threat Table.",
+        "attributes": null
+      },
+      {
+        "targeter": "@RandomThreatTarget",
+        "shorthand": [
+  
+        ],
+        "description": "Targets a random entity on the caster's Threat Table.",
+        "attributes": null
+      },
+      {
+        "targeter": "@ThreatTable",
+        "shorthand": [
+  
+        ],
+        "description": "Targets all entities on the caster's Threat Table.",
+        "attributes": null
+      },
+      {
+        "targeter": "@TrackedLocation",
+        "shorthand": [
+  
+        ],
+        "description": "Targets the caster's tracked location.",
+        "attributes": null
+      },
+      {
+        "targeter": "@TrackedLocation",
+        "shorthand": [
+  
+        ],
+        "description": "Targets the location of the entity that triggered the skill or mechanic.",
+        "attributes": null
+      },
+      {
+        "targeter": "@Trigger",
+        "shorthand": [
+  
+        ],
+        "description": "Targets the entity that triggered the skill or mechanic.",
+        "attributes": null
+      },
+      {
+        "targeter": "@UniqueIdentifier",
+        "shorthand": [
+          "@UUID"
+        ],
+        "description": "Targets the entity matching a specified UUID.",
+        "attributes": [
+          {
+            "attribute": "uuid",
+            "aliases": [
+              "u"
+            ],
+            "description": "The UUID to check for. Defaults to 0.",
+            "values": [
+              "uuid"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@VariableLocation",
+        "shorthand": [
+          "@VarLocation"
+        ],
+        "description": "Targets the location stored in a variable.",
+        "attributes": [
+          {
+            "attribute": "name",
+            "aliases": [
+              "n",
+              "variable",
+              "var",
+              "key",
+              "k"
+            ],
+            "description": "The variable to check for. Defaults to none.",
+            "values": [
+              "variable",
+              "scope.variable"
+            ]
+          },
+          {
+            "attribute": "scope",
+            "aliases": [
+              "s"
+            ],
+            "description": "The scope of the variable. Defaults to the value specified in the name attribute, or SKILL if none specified.",
+            "values": [
+              "SKILL"
+            ]
+          }
+        ]
+      },
+      {
+        "targeter": "@Vehicle",
+        "shorthand": [
+  
+        ],
+        "description": "Targets the entity the caster is riding.",
+        "attributes": null
+      },
+      {
+        "targeter": "@WolfOwner",
+        "shorthand": [
+  
+        ],
+        "description": "Targets the owner of the wolf.",
+        "attributes": null
+      }
+    ]
+  }

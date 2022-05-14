@@ -9,16 +9,15 @@ export let entities = require('./data/MobTypes.json');
 export let itemOptions = require('./data/ItemOptions.json');
 export let entityOptions = require ('./data/Options.json');
 
+export let triggers = require('./data/Triggers.json');
+export let targeters = require('./data/Targers.json');
+
 
 let context: vscode.ExtensionContext;
 
 export function generateData(ctx: vscode.ExtensionContext) {
     context = ctx;
     items = readIntoArray('items.txt');
-    // entities = readIntoArray('entities.txt');
-
-    // itemOptions = readIntoArray('item_options.txt');
-    // entityOptions = readIntoArray('entity_options.txt');
 }
 
 /**
