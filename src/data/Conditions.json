@@ -1,0 +1,306 @@
+{
+    "conditions":
+    [
+        {
+            "condition": "Altitude",
+            "type": "Entity",
+            "description": "Tests how far above the ground the target entity is.",
+            "aliases": "heightfromsurface",
+            "attributes": [
+                {
+                    "attribute": "height",
+                    "aliases": [
+                        "altitude",
+                        "h",
+                        "a",
+                        "height"
+                    ],
+                    "description": "The height range to check.",
+                    "values": [
+                        "RangedDouble"
+                    ]
+                }
+            ]
+        },
+        {
+            "condition": "Biome",
+            "type": "Location",
+            "description": "Tests the biome at the target location.",
+            "aliases": [],
+            "attributes": [
+                {
+                    "attribute": "biome",
+                    "aliases": [
+                        "b"
+                    ],
+                    "description": "A comma seperated list of biomes to check. Type exactly what you see in the F3 menu.",
+                    "values": [
+                        "Biome Name"
+                    ]
+                },
+                {
+                    "attribute": "exact",
+                    "aliases": [
+                        "e"
+                    ],
+                    "description": "Whether or not to match the biome exactly.",
+                    "values": [
+                        "true",
+                        "false"
+                    ]
+                }
+            ]
+        },
+        {
+            "condition": "biometype",
+            "type": "Location",
+            "description": "Tests the biome category at a location.",
+            "aliases": [
+                "biomecategory"
+            ],
+            "attributes": [
+                {
+                    "attribute": "type",
+                    "aliases": [
+                        "t"
+                    ],
+                    "description": "A list of biome types to check.",
+                    "values": [
+                        "BEACH",
+                        "DESERT",
+                        "EXTREME_HILLS",
+                        "FOREST",
+                        "ICY",
+                        "JUNGLE",
+                        "MESA",
+                        "MOUNTAIN",
+                        "MUSHROOM",
+                        "NETHER",
+                        "NONE",
+                        "OCEAN",
+                        "PLAINS",
+                        "RIVER",
+                        "SAVANNA",
+                        "SWAMP",
+                        "TAIGA",
+                        "THEEND",
+                        "UNDERGROUND"
+                    ]
+                }
+            ]
+            
+        },
+        {
+            "condition": "blocking",
+            "type": "Entity",
+            "aliases": "isblocking",
+            "description": "Tests if the target entity is blocking.",
+            "attributes": []
+        },
+        {
+            "condition": "blockType",
+            "type": "Location",
+            "aliases": [],
+            "description": "Checks the material enum of the specified location. Can be a comma seperated list. Supports mmoitems in the format mmoitems-#",
+            "attributes": [
+                {
+                    "attribute": "types",
+                    "aliases": [
+                        "type",
+                        "t",
+                        "material",
+                        "mat",
+                        "m"
+                    ],
+                    "description": "A list of material types to check.",
+                    "values": [
+                        "Material",
+                        "mmoitems-#"
+                    ]
+                }
+            ]
+        },
+        {
+            "condition": "bowTension",
+            "type": "Entity",
+            "aliases": [
+                "bowshoottension"
+            ],
+            "description": "Checks the bow tension of when an entity shoots from a bow.",
+            "attributes": [
+                {
+                    "attribute": "force",
+                    "aliases": [
+                        "f",
+                        "value",
+                        "v"
+                    ],
+                    "description": "The value/force of the bow. Accepts ranged values, limited 0 to 1.",
+                    "values": [
+                        "RangedDouble"
+                    ]
+                }
+            ]
+        },
+        {
+            "condition": "burning",
+            "aliases": [
+                "isburning",
+                "isonfire"
+            ],
+            "type": "Entity",
+            "description": "Tests if the target entity is burning.",
+            "attributes": []
+        },
+        {
+            "condition": "children",
+            "aliases": [],
+            "type": "Entity",
+            "description": "Tests how many children the target entity has.",
+            "attributes": [
+                {
+                    "attribute": "amount",
+                    "aliases": [
+                        "a"
+                    ],
+                    "description": "The amount of children to check.",
+                    "values": [
+                        "RangedInteger"
+                    ]
+                }
+            ]
+        },
+        {
+            "condition": "color",
+            "aliases": [
+                "clr"
+            ],
+            "type": "Entity",
+            "description": "Tests the color of the target entity. Works on sheep, shulker, horse, llama, parrot, cat.",
+            "attributes": [
+                {
+                    "attribute": "color",
+                    "aliases": [
+                        "c", 
+                        "clr"
+                    ],
+                    "description": "The color to check for.",
+                    "values": [
+                        "Color"
+                    ]
+                }
+            ]
+        },
+        {
+            "condition": "charged",
+            "aliases": [
+                "isCharged",
+                "creeperCharged"
+            ],
+            "attributes": [],
+            "description": "Tests if the target entity (must be a creeper) is charged.",
+            "type": "Entity"
+        },
+        {
+            "condition": "crouching",
+            "aliases": [
+                "sneaking",
+                "iscrouching",
+                "issneaking"
+            ],
+            "attributes": [],
+            "description": "Tests if the target entity is crouching.",
+            "type": "Entity"
+        },
+        {
+            "condition": "cuboid",
+            "aliases": [
+                "incuboid"
+            ],
+            "type": "Comparison",
+            "description": "Tests if the target entity is in a given cuboid.",
+            "attributes": [
+                {
+                    "attribute": "relative",
+                    "aliases": [
+                        "r"
+                    ],
+                    "description": "Whether or not the coordinates should be relative to the caster.",
+                    "values": [
+                        "true",
+                        "false"
+                    ]
+                },
+                {
+                    "attribute": "location1",
+                    "aliases": [
+                        "loc1",
+                        "l1",
+                        "a"
+                    ],
+                    "description": "x,y,z coordinates for the first point.",
+                    "values": [
+                        "x,y,z"
+                    ]
+                },
+                {
+                    "attribute": "location2",
+                    "aliases": [
+                        "loc2",
+                        "l2",
+                        "b"
+                    ],
+                    "description": "x,y,z coordinates for the second point.",
+                    "values": [
+                        "x,y,z"
+                    ]
+                }
+            ]
+        },
+        {
+            "condition": "DamageAmount",
+            "aliases": [],
+            "type": "Entity",
+            "description": "Checks the damage amount that caused the current skill tree. Only works with onDamaged trigger or aura.",
+            "attributes": [
+                {
+                    "attribute": "amount",
+                    "aliases": [
+                        "a",
+                        "damageamount"
+                    ],
+                    "description": "The amount of damage to check for.",
+                    "values": [
+                        "RangedDouble"
+                    ]
+                }
+            ]
+        },
+        {
+            "condition": "DamageCause",
+            "aliases": [],
+            "type": "Entity",
+            "description": "Checks the damage cause that caused the current skill tree. Only works with onDamaged trigger or aura.",
+            "attributes": [
+                {
+                    "attribute": "cause",
+                    "aliases": [
+                        "c",
+                        "damagecause"
+                    ],
+                    "description": "The cause of the damage to check for.",
+                    "values": [
+                        "DamageCause (Enum)"
+                    ]
+                }
+            ]
+        },
+        {
+            "condition": "dawn",
+            "aliases": [],
+            "type": "Location",
+            "description": "Tests if the time is between 22000 to 2000 in game time, or dawn.",
+            "attributes": []
+        }
+    ]
+}

@@ -19,6 +19,8 @@ export class MythicLocation {
     public line: string | undefined; // Line at the cursor
 }
 
+//TODO - Add support for multi line completion. Mob options are a great example.
+
 export const getLocation = (document: vscode.TextDocument)  => {
 
     const mL = new MythicLocation();
