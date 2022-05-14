@@ -18,7 +18,7 @@ export const getCompletions = (document: vscode.TextDocument, position: vscode.P
             
             switch(location.key) {
                 case "Id":
-                    items.forEach(element => {
+                    items.Items.forEach((element: string) => {
                         completions.push(new vscode.CompletionItem(element, vscode.CompletionItemKind.Text));
                     });
                     break;

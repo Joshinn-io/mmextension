@@ -3,21 +3,20 @@ var path = require("path");
 import * as vscode from 'vscode';
 import { ExtensionContext, Uri, Webview } from 'vscode';
 
-export let items: Array<string> = [];
+export let items = require('./data/Items.json');
 export let entities = require('./data/MobTypes.json');
 
 export let itemOptions = require('./data/ItemOptions.json');
 export let entityOptions = require ('./data/Options.json');
 
 export let triggers = require('./data/Triggers.json');
-export let targeters = require('./data/Targers.json');
+export let targeters = require('./data/Targeters.json');
 
 
 let context: vscode.ExtensionContext;
 
 export function generateData(ctx: vscode.ExtensionContext) {
     context = ctx;
-    items = readIntoArray('items.txt');
 }
 
 /**
