@@ -301,6 +301,1011 @@
             "type": "Location",
             "description": "Tests if the time is between 22000 to 2000 in game time, or dawn.",
             "attributes": []
+        },
+        {
+            "condition": "day",
+            "aliases": [],
+            "type": "Location",
+            "description": "Tests if the time is between 2000 and 10000 in game time, or day.",
+            "attributes": []
+        },
+        {
+            "condition": "dimension",
+            "aliases": [
+                "environment"
+            ],
+            "type": "Location",
+            "description": "Tests if the target is within a certain dimension.",
+            "attributes": [
+                {
+                    "attribute": "dimension",
+                    "aliases": [
+                        "d",
+                        "env",
+                        "environment"
+                    ],
+                    "description": "The dimension to check for.",
+                    "values": [
+                        "Environment (Enum)"
+                    ]
+                }
+            ]
+        },
+        {
+            "condition": "distance",
+            "aliases": [],
+            "type": "Comparison",
+            "description": "Tests whether the distance between the caster and the target is within the given range.",
+            "attributes": [
+                {
+                    "attribute": "distance",
+                    "aliases": [
+                        "d"
+                    ],
+                    "description": "The distance to check for.",
+                    "values": [
+                        "RangedDouble"
+                    ]
+                }
+            ]
+        },
+        {
+            "condition": "distanceFromSpawn",
+            "aliases": [],
+            "type": "Location",
+            "description": "Tests whether the worlds spawn point to the target is within the given range.",
+            "attributes": [
+                {
+                    "attribute": "distance",
+                    "aliases": [
+                        "d"
+                    ],
+                    "description": "The distance to check for.",
+                    "values": [
+                        "RangedDouble"
+                    ]
+                }    
+            ]
+        },
+        {
+            "condition": "distanceFromTrackedLocation",
+            "aliases": "distanceFromTL",
+            "type": "Location",
+            "description": "Tests whether the target is within the given range of the tracked location.",
+            "attributes": [
+                {
+                    "attribute": "distance",
+                    "aliases": [
+                        "d"
+                    ],
+                    "description": "The distance to check for.",
+                    "values": [
+                        "RangedDouble"
+                    ]
+                }
+            ]
+        },
+        {
+            "condition": "dusk",
+            "aliases": [],
+            "type": "Location",
+            "description": "If the time is dusk, or between 14000 and 18000 ticks.",
+            "attributes": []
+        },
+        {
+            "condition": "enchantingExperience",
+            "aliases": [
+                "enchantingExp",
+                "enchantExperience",
+                "enchantExp"
+            ],
+            "type": "Entity",
+            "description": "Checks the enchanting experience of the target entity.",
+            "attributes": [
+                {
+                    "attribute": "level",
+                    "aliases": [
+                        "l"
+                    ],
+                    "description": "The experience amount to check for.",
+                    "values": [
+                        "RangedDouble"
+                    ]
+                }
+            ]
+        },
+        {
+            "condition": "enchantingLevel",
+            "aliases": [],
+            "type": "Entity",
+            "description": "Checks the enchanting level of the target entity.",
+            "attributes": [
+                {
+                    "attribute": "level",
+                    "aliases": [
+                        "l"
+                    ],
+                    "description": "The level to check for.",
+                    "values": [
+                        "RangedInt"
+                    ]
+                }
+            ]
+        },
+        {
+            "condition": "enderdragonPhase",
+            "aliases": [
+                "edragonphase"
+            ],
+            "type": "Entity",
+            "description": "Checks the ender dragon phase of the target entity (if its an enderdragon).",
+            "attributes": [
+                {
+                    "attribute": "phase",
+                    "aliases": [
+                        "p"
+                    ],
+                    "description": "The phases to check for, in a comma seperated list.",
+                    "values": [
+                        "EnderDragonPhase (Enum)"
+                    ]
+                }
+            ]
+        },
+        {
+            "condition": "entityitemissimilar",
+            "aliases": [],
+            "type": "Entity",
+            "description": "Tests if the item entity is similar to an itemstack.",
+            "attributes": [
+                {
+                    "attribute": "item",
+                    "aliases": [
+                        "i",
+                        "m",
+                        "material",
+                        "mm",
+                        "mythicitem"
+                    ],
+                    "description": "The item to check for (material or mythic/mmo item type).",
+                    "values": [
+                        "Material",
+                        "MythicItem",
+                        "mmoitems.",
+                        "droptable."
+                    ]
+                }
+            ]
+        },
+        {
+            "condition": "entityItemType",
+            "aliases": [],
+            "type": "Entity",
+            "description": "Tests if the item entity is of a certain type. Must be cast on a dropped item entity.",
+            "attributes": [
+                {
+                    "attribute": "material",
+                    "aliases": [
+                        "mat",
+                        "m",
+                        "type",
+                        "types",
+                        "t"
+                    ],
+                    "description": "The item type to check for.",
+                    "values": [
+                        "Material"
+                    ]
+                }
+            ]
+        },
+        {
+            "condition": "entityMaterialType",
+            "aliases": [],
+            "type": "Entity",
+            "description": "Tests the material type of a target item entity. Must be cast on a dropped item entity.",
+            "attributes": [
+                {
+                    "attribute": "material",
+                    "aliases": [
+                        "mat",
+                        "m",
+                        "type",
+                        "types",
+                        "t"
+                    ],
+                    "description": "A list of material types to match, comma seperated.",
+                    "values": [
+                        "Material"
+                    ]
+                }
+            ]
+        },
+        {
+            "condition": "entityType",
+            "aliases": [
+                "mobtype"
+            ],
+            "type":"Entity",
+            "description": "Checks the target entity against a list of given entity/mob types.",
+            "attributes": [
+                {
+                    "attribute": "types",
+                    "aliases": [
+                        "t",
+                        "type"
+                    ],
+                    "description": "A list of entity/mob types to check for, comma seperated.",
+                    "values": [
+                        "EntityType (Enum)"
+                    ]
+                }
+            ]
+        },
+        {
+            "condition": "faction",
+            "aliases": [],
+            "type": "Entity",
+            "description": "Tests the faction of a target entity.",
+            "attributes": [
+                {
+                    "attribute": "faction",
+                    "aliases": [
+                        "f"
+                    ],
+                    "description": "The faction to check for.",
+                    "values": [
+                        "Faction"
+                    ]
+                }
+            ]
+        },
+        {
+            "condition": "samefaction",
+            "aliases": [
+                "factionsame"
+            ],
+            "type": "Comparison",
+            "description": "Checks if the caster and the tatget are in the same faction.",
+            "attributes": []
+        },
+        {
+            "condition": "fallspeed",
+            "aliases": [
+                "fallingspeed"
+            ],
+            "type": "Entity",
+            "description": "Checks if the fall speed of the target is within the given range.",
+            "attributes": [
+                {
+                    "attribute": "speed",
+                    "aliases": [
+                        "s"
+                    ],
+                    "description": "The fall speed to check for.",
+                    "values": [
+                        "RangedDouble"
+                    ]
+                }
+            ]
+        },
+        {
+            "condition": "fieldOfView",
+            "aliases": [
+                "infieldofview",
+                "fov"
+            ],
+            "description": "Tests if the target is within the given angle from where the caster is looking.",
+            "type": "Comparison",
+            "attributes" : [
+                {
+                    "attribute": "angle",
+                    "aliases": [
+                        "a"
+                    ],
+                    "description": "The angle to check for.",
+                    "values": [
+                        "Double"
+                    ]
+                },
+                {
+                    "attribute": "rotation",
+                    "aliases": [
+                        "r"
+                    ],
+                    "description": "Rotates the FOV to check in",
+                    "values": [
+                        "Double"
+                    ]
+                }
+            ]
+        },
+        {
+            "condition": "foodlevel",
+            "aliases": [
+                "hunger",
+                "food",
+                "hungerlevel"
+            ],
+            "type": "Entity",
+            "description": "Checks if the target entity's food is within the given range.",
+            "attributes": [
+                {
+                    "attribute": "amount",
+                    "aliases": [
+                        "a",
+                        "food",
+                        "f"
+                    ],
+                    "description": "The food level to check for.",
+                    "values": [
+                        "RangedDouble"
+                    ]
+                }
+            ]
+        },
+        {
+            "condition": "foodSaturation",
+            "aliases": [
+                "hungerSaturation"
+            ],
+            "type": "Entity",
+            "description": "Checks if the target entity's saturation is within the given range.",
+            "attributes": [
+                {
+                    "attribute": "amount",
+                    "aliases": [
+                        "a",
+                        "food",
+                        "f"
+                    ],
+                    "description": "The food level to check for.",
+                    "values": [
+                        "RangedDouble"
+                    ]
+                }
+            ]
+        },
+        {
+            "condition": "gliding",
+            "aliases": [
+                "isgliding"
+            ],
+            "type":"Entity",
+            "description": "If the target entity is gliding.",
+            "attributes": []
+        },
+        {
+            "condition": "hasAura",
+            "type": "Entity",
+            "description": "Tests if the target entity has an aura.",
+            "aliases": [
+                "hasbuff",
+                "hasdebuff"
+            ],
+            "attributes": [
+                {
+                    "attribute": "aura",
+                    "aliases": [
+                        "name",
+                        "aurename",
+                        "buffname",
+                        "buff"
+                    ],
+                    "description": "The aura to check for.",
+                    "values": [
+                        "String"
+                    ]
+                }
+            ]
+        },
+        {
+            "condition": "hasAuraStacks",
+            "aliases": [
+                "hasbuffstacks",
+                "hasdebuffstacks",
+                "aurastacks",
+                "buffstacks",
+                "debuffstacks"
+            ],
+            "type": "Entity",
+            "description": "Tests if the target entity has an aura with the given amount of stacks.",
+            "attributes": [
+                {
+                    "attribute": "name",
+                    "aliases": [
+                        "aura",
+                        "buffname",
+                        "buff",
+                        "debuffname",
+                        "debuff"
+                    ],
+                    "description": "The aura to check for.",
+                    "values": [
+                        "String"
+                    ]
+                },
+                {
+                    "attribute": "stacks",
+                    "aliases": [
+                        "s"
+                    ],
+                    "description": "The amount of stacks to check for.",
+                    "values": [
+                        "RangedInteger"
+                    ]
+                }
+            ]
+        },
+        {
+            "condition": "hasCurrency",
+            "aliases": [
+                "hasmoney"
+            ],
+            "type": "Entity",
+            "description": "Tests if the target entity has the given amount of currency.",
+            "attributes": [
+                {
+                    "attribute": "amount",
+                    "aliases": [
+                        "a"
+                    ],
+                    "description": "The amount of currency to check for.",
+                    "values": [
+                        "Double"
+                    ]
+                }
+            ]
+        },
+        {
+            "condition": "hasEnchantment",
+            "aliases": [
+                "hasEnchant"
+            ],
+            "description": "Checks if the entity haas the given enchantment level equal or higher than provided.",
+            "type": "Entity",
+            "attributes": [
+                {
+                    "attribute": "enchantment",
+                    "aliases": [
+                        "e",
+                        "ench"
+                    ],
+                    "description": "The enchantment to check for.",
+                    "values": [
+                        "Enchantment"
+                    ]
+                },
+                {
+                    "attribute": "level",
+                    "aliases": [
+                        "l",
+                        "lvl"
+                    ],
+                    "description": "The level of the enchantment to check for, which is optional.",
+                    "values": [
+                        "RangedInteger"
+                    ]
+                }
+            ]
+        },
+        {
+            "condition": "hasgravity",
+            "type": "Entity",
+            "description": "Checks if the target entity has gravity.",
+            "aliases": [
+                "gravity"
+            ],
+            "attributes": []
+        },
+        {
+            "condition": "hasInventorySpace",
+            "aliases": [],
+            "attributes": [],
+            "type":"Entity",
+            "description": "True if the target entity has an empty inventory slot."
+        },
+        {
+            "condition": "HasItem",
+            "aliases": [],
+            "description": "Checks the inventory for the given item. Can check an entity or a location if its a shulker/chest.",
+            "type": "Entity/Location",
+            "attributes": [
+                {
+                    "attribute": "item",
+                    "aliases": [
+                        "i",
+                        "material",
+                        "m"
+                    ],
+                    "description": "The item to check for.",
+                    "values": [
+                        "Item"
+                    ]
+                },
+                {
+                    "attribute": "amount",
+                    "aliases": [
+                        "a"
+                    ],
+                    "description": "The amount of items to check for.",
+                    "values": [
+                        "RangedInt"
+                    ]
+                }
+            ]
+        },
+        {
+           "condition": "hasOwner",
+           "aliases": [],
+           "attributes": [],
+           "description": "Tests if the target has an owner.",
+           "type":"Entity" 
+        },
+        {
+            "condition": "hasParent",
+            "aliases": [],
+            "attributes": [],
+            "description": "Tests if the target has a parent.",
+            "type":"Entity"
+        },
+        {
+            "condition": "haspassenger",
+            "aliases": [],
+            "attributes": [],
+            "description": "Tests if the target has a passenger.",
+            "type":"Entity"
+        },
+        {
+            "condition": "haspermission",
+            "aliases": [
+                "permission"
+            ],
+            "attributes": [
+                {
+                    "attribute": "permission",
+                    "aliases": [
+                        "p"
+                    ],
+                    "description": "The permission to check for.",
+                    "values": [
+                        "String"
+                    ]
+                }
+            ],
+            "description": "Tests if the target has the given permission.",
+            "type": "Entity"
+        },
+        {
+            "condition": "hasPotionEffect",
+            "aliases": [
+                "hasPotion"
+            ],
+            "type":"Entity",
+            "description": "Tests if the target entity has the given potion effect.",
+            "attributes": [
+                {
+                    "attribute": "type",
+                    "aliases": [
+                        "t"
+                    ],
+                    "description": "The potion effect to check for.",
+                    "values": [
+                        "PotionEffect"
+                    ]
+                },
+                {
+                    "attribute": "level",
+                    "aliases": [
+                        "l",
+                        "lvl"
+                    ],
+                    "description": "The level of the potion effect to check for.",
+                    "values": [
+                        "RangedInteger"
+                    ]
+                },
+                {
+                    "attribute": "duration",
+                    "aliases": [
+                        "d"
+                    ],
+                    "description": "An optional durational range to check for.",
+                    "values": [
+                        "RangedInteger"
+                    ]
+                }
+            ]
+        },
+        {
+            "condition": "hasTag",
+            "aliases": [
+                "hasScoreboardTag"
+            ],
+            "type":"Entity",
+            "description": "Tests if the entity has a provided scoreboard tag.",
+            "attributes": [
+                {
+                    "attribute": "tag",
+                    "aliases": [
+                        "t"
+                    ],
+                    "description": "The scoreboard tag to check for.",
+                    "values": [
+                        "String"
+                    ]
+                }
+            ]
+        },
+        {
+            "condition": "health",
+            "aliases": [
+                "hp"
+            ],
+            "type":"Entity",
+            "description": "Tests if the target entity has the given amount of health.",
+            "attributes": [
+            {
+                "attribute": "health",
+                "aliases": [
+                    "h",
+                    "amount",
+                    "a"
+                ],
+                "description": "The amount of health to check for.",
+                "values": [
+                    "RangedDouble"
+                ]
+            }
+
+            ]
+        },
+        {
+            "condition": "heightAbove",
+            "aliases": [],
+            "attributes": [
+                {
+                    "attribute": "height",
+                    "aliases": [
+                        "h"
+                    ],
+                    "description": "Y location to check for.",
+                    "values": [
+                        "Integer"
+                    ]
+                }
+            ],
+            "description": "Tests if the target entity is above the given height.",
+            "type": "Location"
+        },
+        {
+            "condition": "heightBelow",
+            "aliases": [],
+            "attributes": [
+                {
+                    "attribute": "height",
+                    "aliases": [
+                        "h"
+                    ],
+                    "description": "Y location to check for.",
+                    "values": [
+                        "Integer"
+                    ]
+                }
+            ],
+            "description": "Tests if the target entity is below the given height.",
+            "type": "Location"           
+        },
+        {
+            "condition": "height",
+            "aliases": [],
+            "attributes": [
+                {
+                    "attribute": "height",
+                    "aliases": [
+                        "h"
+                    ],
+                    "description": "Y location range to check for.",
+                    "values": [
+                        "RangedDouble"
+                    ]
+                }
+            ],
+            "description": "Tests if the target entity is within the given height range.",
+            "type": "Location"
+        },
+        {
+            "condition": "holding",
+            "aliases": [],
+            "type": "Entity",
+            "attributes": [
+                {
+                    "attribute": "material",
+                    "aliases": [
+                        "t",
+                        "m",
+                        "type"
+                    ],
+                    "description": "The material to check for.",
+                    "values": [
+                        "Material",
+                        "MMOItem",
+                        "MtyhicItem"
+                    ]
+                }
+            ],
+            "description": "Tests if the target entity is holding the given material."
+        },
+        {
+            "condition": "inblock",
+            "aliases": "insideblock",
+            "description": "Checks the material at the target location.",
+            "type": "Location",
+            "attributes": [
+                {
+                    "attribute": "material",
+                    "aliases": [
+                        "m",
+                        "mat",
+                        "blocks",
+                        "b",
+                        "block"
+                    ],
+                    "description": "A comma seperated list of materials to check for.",
+                    "values": [
+                        "Material"
+                    ]
+                }
+            ]
+        },
+        {
+            "condition": "inClaim",
+            "aliases": [
+                "inclaim"
+            ],
+            "type": "Location",
+            "description": "Checks if the location is in a grief prevention claim.",
+            "attributes": []
+        },
+        {
+            "condition": "incombat",
+            "aliases": [],
+            "type": "Entity",
+            "description": "Checks if the target entity is in combat.",
+            "attributes": []
+        },
+        {
+            "condition": "inside",
+            "aliases": [],
+            "type": "Location",
+            "description": "Checks if the target is inside (if theres a block above them)",
+            "attributes": []
+        },
+        {
+            "condition": "isInSurvivalMode",
+            "aliases": [
+                "inSurvivalMode"
+            ],
+            "attributes": [],
+            "description": "Checks if the target (player) is in survival mode.",
+            "type":"Entity"
+        },
+        {
+            "condition": "iscaster",
+            "aliases": [],
+            "attributes": [],
+            "description": "If the target of the condition is the caster.",
+            "type": "Comparison"
+        },
+        {
+            "condition": "ischild",
+            "aliases": [
+                "child"
+            ],
+            "attributes": [],
+            "description": "Checks if the target is a child of the caster.",
+            "type":"Comparison"
+        },
+        {
+            "condition": "isCreeperPrimed",
+            "aliases": [],
+            "attributes": [],
+            "description": "Checks if the target creeper is primed to explode",
+            "type": "Entity"
+        },
+        {
+            "condition": "isFrozen",
+            "aliases": [],
+            "attributes": [],
+            "description": "Checks if the target entity is frozen.",
+            "type": "Entity"
+        },
+        {
+            "condition": "IsLeashed",
+            "aliases": [],
+            "attributes": [],
+            "description": "Checks if the target entity is leashed.",
+            "type": "Entity"
+        },
+        {
+            "condition": "isLiving",
+            "aliases": [],
+            "attributes": [],
+            "description": "If the target is living (not an armorstand and alive).",
+            "type": "Entity"
+        },
+        {
+            "condition": "ismonster",
+            "aliases": [],
+            "attributes": [],
+            "description":"If the target is a monster.",
+            "type":"Entity"
+        },
+        {
+            "condition": "isNaturalBlock",
+            "description": "Checks if the target block was naturally generated.",
+            "aliases": [],
+            "attributes": [],
+            "type":"Location"
+        },
+        {
+            "condition": "parent",
+            "aliases": [
+                "isParent"
+            ],
+            "attributes": [],
+            "description": "Checks if the target entity is the parent/summoner of the caster.",
+            "type": "Comparison"
+        },
+        {
+            "condition": "isplayer",
+            "aliases": [],
+            "attributes": [],
+            "description": "Checks if the target entity is a player.",
+            "type": "Entity"
+        },
+        {
+            "condition": "itemissimilar",
+            "aliases": [
+                "issimilar",
+                "similarto"
+            ],
+            "description": "Checks if the ItemStack is similar.",
+            "type": "Entity",
+            "attributes": [
+                {
+                    "attribute": "item",
+                    "aliases": [
+                        "i",
+                        "material",
+                        "m"
+                    ],
+                    "description": "The item to check for.",
+                    "values": [
+                        "ItemStack",
+                        "MMOItem",
+                        "Material"
+                    ]
+                },
+                {
+                    "attribute": "slot",
+                    "aliases": [
+                        "s"
+                    ],
+                    "description": "The slot to check for, default HAND.",
+                    "values": [
+                        "Slot (Enum)"
+                    ]
+                }
+            ]
+        },
+        {
+            "condition": "itemRecharging",
+            "aliases": [],
+            "attributes": [],
+            "description": "Checks if the item is recharging.",
+            "type": "Entity"
+        },
+        {
+            "condition": "lastDamageCause",
+            "aliases": [],
+            "attributes": [
+                {
+                    "attribute": "cause",
+                    "aliases": [
+                        "c"
+                    ],
+                    "description": "The damage cause to check for.",
+                    "values": [
+                        "DamageCause"
+                    ]
+                }
+            ],
+            "description": "Checks if the last damage cause is equal to the provided damage cause.",
+            "type": "Entity"
+        },
+        {
+            "condition": "lastSignal",
+            "aliases": [],
+            "attributes": [
+                {
+                    "attribute": "signal",
+                    "aliases": [
+                        "s"
+                    ],
+                    "description": "The signal to check for.",
+                    "values": [
+                        "Signal"
+                    ]
+                }
+            ],
+            "description": "Checks if the last signal is equal to the provided signal.",
+            "type": "Entity"
+        },
+        {
+            "condition": "level",
+            "aliases": [],
+            "attributes": [
+                {
+                    "attribute": "level",
+                    "aliases": [
+                        "l"
+                    ],
+                    "description": "The level to check for.",
+                    "values": [
+                        "RangedDouble"
+                    ]
+                }
+            ],
+            "description": "Checks if the target entity has the provided mythicmobs level.",
+            "type": "Entity"
+        },
+        {
+            "condition": "lightLevelfromblocks",
+            "aliases": [
+                "blocklightlevel"
+            ],
+            "attributes": [
+                {
+                    "attribute": "level",
+                    "aliases": [
+                        "l"
+                    ],
+                    "description": "The light level to check for.",
+                    "values": [
+                        "RangedInt"
+                    ]
+                }
+            ],
+            "description": "Checks the block light level at the targeted location.",
+            "type": "Location"
+        },
+        {
+            "condition": "lightLevel",
+            "aliases": [],
+            "attributes": [
+                {
+                    "attribute": "level",
+                    "aliases": [
+                        "l"
+                    ],
+                    "description": "The light level to check for.",
+                    "values": [
+                        "RangedInt"
+                    ]
+                }
+            ],
+            "description": "Checks the light level at the targeted location.",
+            "type": "Location"
+        },
+        {
+            "condition": "lineOfSight",
+            "aliases": [
+                "inlineofsight"
+            ],
+            "attributes": [],
+            "description": "Checks if the target entity is within line of sight of the caster.",
+            "type": "Comparison"
         }
     ]
 }
