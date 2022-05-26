@@ -1,0 +1,947 @@
+{
+   "mechanics": [
+      {
+         "mechanic": "SendActionMessage",
+         "shorthand": [
+            "actionmessage",
+            "am"
+         ],
+         "description": "Sends an actionbar message to the target.",
+         "attributes": [
+            {
+               "attribute": "message",
+               "aliases": [
+                  "msg",
+                  "m"
+               ],
+               "description": "Message to send, must be surrounded by quotes.",
+               "values": [
+                  "string"
+               ]
+            }
+         ]
+      },
+      {
+         "mechanic": "SendResourcePack",
+         "shorthand": [],
+         "description": "Sends a resource pack to the target player.",
+         "attributes": [
+            {
+               "attribute": "url",
+               "aliases": [
+                  "u",
+                  "link"
+               ],
+               "description": "The link to the resource pack you want to send.",
+               "values": [
+                  "string"
+               ]
+            },
+            {
+               "attribute": "hash",
+               "aliases": [
+                  "h"
+               ],
+               "description": "The hash value for the resource pack.",
+               "values": [
+                  "string"
+               ]
+            }
+         ]
+      },
+      {
+         "mechanic": "SendTitle",
+         "shorthand": [],
+         "description": "Displays a title or subtitle to the target player.",
+         "attributes": [
+            {
+               "attribute": "title",
+               "aliases": [
+                  "t"
+               ],
+               "description": "The message you want to send as the title, must be surrounded by quotes.",
+               "values": [
+                  "string"
+               ]
+            },
+            {
+               "attribute": "subtitle",
+               "aliases": [
+                  "st"
+               ],
+               "description": "The message you want to send as the subtitle, must be surrounded by quotes.",
+               "values": [
+                  "string"
+               ]
+            },
+            {
+               "attribute": "duration",
+               "aliases": [
+                  "d"
+               ],
+               "description": "The duration of the title in ticks. Defaults to 1.",
+               "values": [
+                  "integer"
+               ]
+            },
+            {
+               "attribute": "fadein",
+               "aliases": [
+                  "fi"
+               ],
+               "description": "The fade in time of the title in ticks. Defaults to 1.",
+               "values": [
+                  "integer"
+               ]
+            },
+            {
+               "attribute": "fadeout",
+               "aliases": [
+                  "fo"
+               ],
+               "description": "The fade out time of the title in ticks. Defaults to 1.",
+               "values": [
+                  "integer"
+               ]
+            }
+         ]
+      },
+      {
+         "mechanic": "SendToast",
+         "shorthand": [
+            "advancementmessage",
+            "advmessage",
+            "toastmessage",
+            "toastmsg"
+         ],
+         "description": "Displays a toast icon and message to the target player.",
+         "attributes": [
+            {
+               "attribute": "message",
+               "aliases": [
+                  "msg",
+                  "m"
+               ],
+               "description": "The message you want to send in the toast, must be surrounded by quotes.",
+               "values": [
+                  "string"
+               ]
+            },
+            {
+               "attribute": "icon",
+               "aliases": [
+                  "i"
+               ],
+               "description": "The icon you want to use, must be a minecraft item ID.",
+               "values": [
+                  "string"
+               ]
+            },
+            {
+               "attribute": "iconnbt",
+               "aliases": [
+                  "nbt"
+               ],
+               "description": "The NBT of the icon.",
+               "values": [
+                  "string"
+               ]
+            },
+            {
+               "attribute": "frame",
+               "aliases": [
+                  "f"
+               ],
+               "description": "The frame of the icon, can be challenge, task or goal.",
+               "values": [
+                  "challenge",
+                  "task",
+                  "goal"
+               ]
+            }
+         ]
+      },
+      {
+         "mechanic": "SetAI",
+         "shorthand": [
+            "ai"
+         ],
+         "description": "Sets whether the mob utilizes AI.",
+         "attributes": [
+            {
+               "attribute": "ai",
+               "aliases": [
+                  "state",
+                  "value"
+               ],
+               "description": "Sets the mobs AI. Boolean.",
+               "values": [
+                  "true",
+                  "false"
+               ]
+            }
+         ]
+      },
+      {
+         "mechanic": "SetBlockType",
+         "shorthand": [],
+         "description": "Changes the blocktype at the target location.",
+         "attributes": [
+            {
+               "attribute": "material",
+               "aliases": [
+                  "mat",
+                  "m",
+                  "type",
+                  "t"
+               ],
+               "description": "The material you want to set. Defaults to dirt. Can be an MMOitem block with \"MMOITEM:ID\".",
+               "values": [
+                  "string"
+               ]
+            },
+            {
+               "attribute": "materialdata",
+               "aliases": [
+                  "data",
+                  "md",
+                  "dv"
+               ],
+               "description": "The material data value. Defaults to 0.",
+               "values": [
+                  "string"
+               ]
+            }
+         ]
+      },
+      {
+         "mechanic": "SetBlockType",
+         "shorthand": [],
+         "description": "Changes the blocktype at the target location.",
+         "attributes": [
+            {
+               "attribute": "material",
+               "aliases": [
+                  "mat",
+                  "m",
+                  "type",
+                  "t"
+               ],
+               "description": "The material you want to set. Defaults to dirt.",
+               "values": [
+                  "string"
+               ]
+            },
+            {
+               "attribute": "materialdata",
+               "aliases": [
+                  "data",
+                  "md",
+                  "dv"
+               ],
+               "description": "The material data value. Defaults to 0.",
+               "values": [
+                  "string"
+               ]
+            }
+         ]
+      },
+      {
+         "mechanic": "SetCollidable",
+         "shorthand": [],
+         "description": "Sets whether the mob is collidable.",
+         "attributes": [
+            {
+               "attribute": "collidable",
+               "aliases": [
+                  "c",
+                  "state",
+                  "value"
+               ],
+               "description": "Change if the mob has collision. Boolean,",
+               "values": [
+                  "true",
+                  "false"
+               ]
+            }
+         ]
+      },
+      {
+         "mechanic": "SetFaction",
+         "shorthand": [],
+         "description": "Sets the target mob's faction.",
+         "attributes": [
+            {
+               "attribute": "faction",
+               "aliases": [
+                  "f"
+               ],
+               "description": "The faction to assign the mob.",
+               "values": [
+                  "string"
+               ]
+            }
+         ]
+      },
+      {
+         "mechanic": "SetGameMode",
+         "shorthand": [],
+         "description": "Sets the gamemode of the target player.",
+         "attributes": [
+            {
+               "attribute": "mode",
+               "aliases": [
+                  "m"
+               ],
+               "description": "The gamemode to cahnge the targetted player to. Defaults to survival.",
+               "values": [
+                  "survival",
+                  "creative",
+                  "adventure",
+                  "spectator"
+               ]
+            }
+         ]
+      },
+      {
+         "mechanic": "SetGliding",
+         "shorthand": [],
+         "description": "Makes an elytra-equipped entity glide or stop gliding. This only works on targets that have elytra equipped.",
+         "attributes": [
+            {
+               "attribute": "gliding",
+               "aliases": [
+                  "g"
+               ],
+               "description": "If the entity is forced to glide or not. Boolean.",
+               "values": [
+                  "true",
+                  "false"
+               ]
+            }
+         ]
+      },
+      {
+         "mechanic": "SetGlobalScore",
+         "shorthand": [],
+         "description": "Modifies the scoreboard objective of the fake player __GLOBAL__ to store information globally. No target required.",
+         "attributes": [
+            {
+               "attribute": "objective",
+               "aliases": [
+                  "obj",
+                  "o"
+               ],
+               "description": "Specifies the scoreboard objective to be changed. Doesn't need to already exist.",
+               "values": [
+                  "string"
+               ]
+            },
+            {
+               "attribute": "value",
+               "aliases": [
+                  "v"
+               ],
+               "description": "The value to set in the scoreboard.",
+               "values": [
+                  "number"
+               ]
+            }
+         ]
+      },
+      {
+         "mechanic": "SetHealth",
+         "shorthand": [],
+         "description": "Sets the health of the targetted entity.",
+         "attributes": [
+            {
+               "attribute": "amount",
+               "aliases": [
+                  "a"
+               ],
+               "description": "Amount of health to set. Defaults to 1.0.",
+               "values": [
+                  "number"
+               ]
+            }
+         ]
+      },
+      {
+         "mechanic": "SetLeashHolder",
+         "shorthand": [
+            "setleasher"
+         ],
+         "description": "Sets an entity to hold the caster's leash.",
+         "attributes": [
+            {
+               "attribute": "remove",
+               "aliases": [
+                  "r",
+                  "boolean",
+                  "bool",
+                  "b"
+               ],
+               "description": "Remove the leash from the entity. Boolean",
+               "values": [
+                  "false",
+                  "true"
+               ]
+            }
+         ]
+      },
+      {
+         "mechanic": "SetLevel",
+         "shorthand": [
+            "modifylevel"
+         ],
+         "description": "Modify the target entities level.",
+         "attributes": [
+            {
+               "attribute": "action",
+               "aliases": [
+                  "a"
+               ],
+               "description": "Type of operation to perform. Defaults to SET.",
+               "values": [
+                  "SET",
+                  "ADD",
+                  "SUBTRACT",
+                  "MULTIPLY",
+                  "DIVDE"
+               ]
+            },
+            {
+               "attribute": "level",
+               "aliases": [
+                  "l"
+               ],
+               "description": "Amount of levels used in the operation. Defaults to 1.",
+               "values": [
+                  "integer"
+               ]
+            }
+         ]
+      },
+      {
+         "mechanic": "SetMaxHealth",
+         "shorthand": [],
+         "description": "Sets the health of the targetted entity.",
+         "attributes": [
+            {
+               "attribute": "amount",
+               "aliases": [
+                  "a"
+               ],
+               "description": "Amount of health to set. Defaults to 1.0.",
+               "values": [
+                  "number"
+               ]
+            },
+            {
+               "attribute": "mode",
+               "aliases": [
+                  "m"
+               ],
+               "description": "The method of setting max health. STATIC will set the max health directly to amount value. SCALE will set the new max health but also scale the current health of the entity accordingly.",
+               "values": [
+                  "STATIC",
+                  "SCALE"
+               ]
+            }
+         ]
+      },
+      {
+         "mechanic": "SetMobColor",
+         "shorthand": [
+            "setcolor"
+         ],
+         "description": "Sets the color of the target entity. Must be a colorable entity.",
+         "attributes": [
+            {
+               "attribute": "color",
+               "aliases": [
+                  "c"
+               ],
+               "description": "The color to set. Defaults to WHITE.",
+               "values": [
+                  "WHITE",
+                  "AQUA",
+                  "BLACK",
+                  "BLUE",
+                  "FUCHSIA",
+                  "GRAY",
+                  "GREEN",
+                  "LIME",
+                  "MAROON",
+                  "NAVY",
+                  "OLIVE",
+                  "ORANGE",
+                  "PURPLE",
+                  "RED",
+                  "SILVER",
+                  "TEAL",
+                  "YELLOW"
+               ]
+            }
+         ]
+      },
+      {
+         "mechanic": "SetMobScore",
+         "shorthand": [],
+         "description": "Modifies the scoreboard objective of the casting mob.",
+         "attributes": [
+            {
+               "attribute": "objective",
+               "aliases": [
+                  "obj",
+                  "o"
+               ],
+               "description": "Specifies the scoreboard objective to be changed. Doesn't need to already exist.",
+               "values": [
+                  "string"
+               ]
+            },
+            {
+               "attribute": "value",
+               "aliases": [
+                  "v"
+               ],
+               "description": "The value to set in the scoreboard.",
+               "values": [
+                  "number"
+               ]
+            }
+         ]
+      },
+      {
+         "mechanic": "SetName",
+         "shorthand": [],
+         "description": "Sets the target mob's name.",
+         "attributes": [
+            {
+               "attribute": "name",
+               "aliases": [
+                  "n"
+               ],
+               "description": "The name to set.",
+               "values": [
+                  "string"
+               ]
+            }
+         ]
+      },
+      {
+         "mechanic": "SetNoDamageTicks",
+         "shorthand": [
+            "setimmunityticks"
+         ],
+         "description": "Sets the damage immunity ticks on the target entity.",
+         "attributes": [
+            {
+               "attribute": "ticks",
+               "aliases": [
+                  "t",
+                  "duration",
+                  "d"
+               ],
+               "description": "The amount of no damage ticks to set. Defaults to 0.",
+               "values": [
+                  "number"
+               ]
+            }
+         ]
+      },
+      {
+         "mechanic": "SetOwner",
+         "shorthand": [
+            "setimmunityticks"
+         ],
+         "description": "Sets the \"owner\" attribute of the Mythic Mob. This is not the same as a wold of ocelot owner."
+      },
+      {
+         "mechanic": "SetPitch",
+         "shorthand": [],
+         "description": "Modifies the head pitch of the target entity.",
+         "attributes": [
+            {
+               "attribute": "amount",
+               "aliases": [
+                  "a",
+                  "pitch",
+                  "p"
+               ],
+               "description": "Value of pitch to set. Defaults to 0.",
+               "values": [
+                  "number"
+               ]
+            }
+         ]
+      },
+      {
+         "mechanic": "SetRotation",
+         "shorthand": [
+            "setrot"
+         ],
+         "description": "Sets the target's yaw and/or pitch without teleporting it. Doesn't work on players.",
+         "attributes": [
+            {
+               "attribute": "relative",
+               "aliases": [
+                  "rel",
+                  "r"
+               ],
+               "description": "Adds to the target's yaw/pitch rather than setting it. Boolean.",
+               "values": [
+                  "true",
+                  "false"
+               ]
+            },
+            {
+               "attribute": "yaw",
+               "aliases": [
+                  "y"
+               ],
+               "description": "The yaw value to be set. Defaults to 0.",
+               "values": [
+                  "number"
+               ]
+            },
+            {
+               "attribute": "pitch",
+               "aliases": [
+                  "p"
+               ],
+               "description": "The pitch value to be set. Defaults to 0.",
+               "values": null
+            }
+         ]
+      },
+      {
+         "mechanic": "SetScore",
+         "shorthand": [],
+         "description": "Sets a scoreboard value.",
+         "attributes": [
+            {
+               "attribute": "objective",
+               "aliases": [
+                  "obj",
+                  "o"
+               ],
+               "description": "Specifies the scoreboard objective to be changed. Will be created if the object doesn't exist.",
+               "values": [
+                  "string"
+               ]
+            },
+            {
+               "attribute": "value",
+               "aliases": [
+                  "v"
+               ],
+               "description": "The value to perform the operation with.",
+               "values": [
+                  "number"
+               ]
+            },
+            {
+               "attribute": "name",
+               "aliases": [
+                  "n",
+                  "e"
+               ],
+               "description": "The name of the fake player. Defaults to \"dummy\".",
+               "values": [
+                 "string"
+               ]
+            }
+         ]
+      },
+      {
+         "mechanic": "SetSpeed",
+         "shorthand": [],
+         "description": "Sets the speed attribute of the target entity.",
+         "attributes": [
+            {
+               "attribute": "speed",
+               "aliases": [
+                  "s",
+                  "amount",
+                  "a",
+                  "value",
+                  "v",
+                  "multiplier",
+                  "m"
+               ],
+               "description": "Set the value of speed. Defaults to 1.",
+               "values": [
+                  "number"
+               ]
+            },
+            {
+               "attribute": "value",
+               "aliases": [
+                  "v"
+               ],
+               "description": "Type of speed. Can be WALKING or FLYING.",
+               "values": [
+                  "WALKING",
+                  "FLYING"
+               ]
+            }
+         ]
+      },
+      {
+         "mechanic": "SetStance",
+         "shorthand": [],
+         "description": "Sets the \"stance\" attribute of the the targetted Mythic Mob.",
+         "attributes": [
+            {
+               "attribute": "stance",
+               "aliases": [
+                  "s"
+               ],
+               "description": "Set the stance to be changed to.",
+               "values": [
+                  "string"
+               ]
+            }
+         ]
+      },
+      {
+         "mechanic": "SetTargetScore",
+         "shorthand": [],
+         "description": "Sets a scoreboard value of the targetting entity.",
+         "attributes": [
+            {
+               "attribute": "objective",
+               "aliases": [
+                  "obj",
+                  "o"
+               ],
+               "description": "Specifies the scoreboard objective to be changed. Will be created if the object doesn't exist.",
+               "values": [
+                  "string"
+               ]
+            },
+            {
+               "attribute": "value",
+               "aliases": [
+                  "v"
+               ],
+               "description": "The value to perform the operation with.",
+               "values": [
+                  "number"
+               ]
+            }
+         ]
+      },
+      {
+         "mechanic": "SetTrackedLocation",
+         "shorthand": [
+            "tracklocation",
+            "stl"
+         ],
+         "description": "Sets the mob'd tracked location to the targetted location."
+      },
+      {
+         "mechanic": "SetGravity",
+         "shorthand": [
+            "setusergravity"
+         ],
+         "description": "Sets whether gravity affects the target entity.",
+         "attributes": [
+            {
+               "attribute": "gravity",
+               "aliases": [
+                  "g",
+                  "use",
+                  "u",
+                  "bool",
+                  "b"
+               ],
+               "description": "Whether the entity should use gravity. Boolean",
+               "values": [
+                  "true",
+                  "false"
+               ]
+            }
+         ]
+      },
+      {
+         "mechanic": "ShieldBreak",
+         "shorthand": [
+            "disableshield"
+         ],
+         "description": "Breaks the target players shield block.",
+         "attributes": [
+            {
+               "attribute": "duration",
+               "aliases": [
+                  "d"
+               ],
+               "description": "The duraction in ticks that the shield is disabled for. Defaults to 100.",
+               "values": [
+                  "number"
+               ]
+            }
+         ]
+      },
+      {
+         "mechanic": "Shield",
+         "shorthand": [],
+         "description": "Adds absorption hearts to the target.",
+         "attributes": [
+            {
+               "attribute": "amount",
+               "aliases": [
+                  "a"
+               ],
+               "description": "The amount of shield to add. Defaults to 1.",
+               "values": [
+                  "number"
+               ]
+            },
+            {
+               "attribute": "maxabsorb",
+               "aliases": [
+                  "maxshield",
+                  "ma",
+                  "ms"
+               ],
+               "description": "The maximum amount of shield to add. Defaults to amount value.",
+               "values": [
+                  "number"
+               ]
+            }
+         ]
+      },
+      {
+         "mechanic": "ShieldPercent",
+         "shorthand": [],
+         "description": "Adds absorption hearts to the target for a percent of their max health.",
+         "attributes": [
+            {
+               "attribute": "multiplier",
+               "aliases": [
+                  "m"
+               ],
+               "description": "The multiplier of shield to add. Defaults to 0.1.",
+               "values": [
+                  "number"
+               ]
+            },
+            {
+               "attribute": "maxabsorb",
+               "aliases": [
+                  "maxshield",
+                  "ma",
+                  "ms"
+               ],
+               "description": "The maximum amount of shield to add. Defaults to multiplier value.",
+               "values": [
+                  "number"
+               ]
+            }
+         ]
+      },
+      {
+         "mechanic": "ShootFireBall",
+         "shorthand": [
+            "fireball"
+         ],
+         "description": "Shoots a fireball projectile at the target location.",
+         "attributes": [
+            {
+               "attribute": "type",
+               "aliases": [
+                  "t"
+               ],
+               "description": "The type of fireball to shoot.",
+               "values": [
+                  "NORMAL",
+                  "SMALL",
+                  "LARGE",
+                  "WITHER",
+                  "DRAGON",
+                  "ITEM"
+               ]
+            },
+            {
+               "attribute": "yield",
+               "aliases": [
+                  "strength",
+                  "y",
+                  "s"
+               ],
+               "description": "The yield of the fireballs explosion. Defaults to 1.",
+               "values": [
+                  "number"
+               ]
+            },
+            {
+               "attribute": "velocity",
+               "aliases": [
+                  "v"
+               ],
+               "description": "The velocity of the fireball. Defaults to 1.",
+               "values": [
+                  "number"
+               ]
+            },
+            {
+               "attribute": "fireticks",
+               "aliases": [
+                  "ft"
+               ],
+               "description": "How long in ticks is fire left behind. Defaults to 0.",
+               "values": [
+                  "number"
+               ]
+            },
+            {
+               "attribute": "incendiary",
+               "aliases": [
+                  "i"
+               ],
+               "description": "Whether the fireball should leave behind fire. Boolean.",
+               "values": [
+                  "true",
+                  "false"
+               ]
+            },
+            {
+               "attribute": "playsound",
+               "aliases": [
+                  "ps"
+               ],
+               "description": "Whether or not to play the fireball launching sound. Boolean.",
+               "values": [
+                  "true",
+                  "false"
+               ]
+            },
+            {
+               "attribute": "smallfireball",
+               "aliases": [
+                  "small",
+                  "sml"
+               ],
+               "description": "Whether or not to use the smaller blaze fireball instead of the ghast fireball. Boolean.",
+               "values": [
+                  "true",
+                  "false"
+               ]
+            },
+            {
+               "attribute": "item",
+               "aliases": [
+                  "material"
+               ],
+               "description": "If set type to item, set the item type.",
+               "values": [
+                  "string"
+               ]
+            }
+         ]
+      }
+   ]
+}
